@@ -28,6 +28,7 @@ script:
       if [ $? != 0 ]; then
        travis_terminate 1
       fi
+     done
   # Check YAML styling
   # - yamllint -c .yamllint.yml -s .travis.yml .yamllint.yml
   # - yamllint -c .yamllint.yml -s $(find . -type f -name "Chart.yaml")
