@@ -1,0 +1,98 @@
+apiVersion: v1
+entries:
+  cassandra:
+  - appVersion: 3.11.2
+    created: 2018-09-07T13:50:37.692363426Z
+    description: Apache Cassandra is a free and open-source distributed database management
+      system designed to handle large amounts of data across many commodity servers,
+      providing high availability with no single point of failure.
+    digest: c60ab375892f427ddfc23e8eba69d9a888c4fb5dc59795e3ef21b4384508622b
+    icon: https://gokube.github.io/miniapps/icons/cassandra.png
+    keywords:
+    - cassandra
+    - database
+    maintainers:
+    - email: jerome.roucheton@gemalto.com
+      name: jroucheton
+    name: cassandra
+    sources:
+    - https:///github.com/gokube/miniapps/tree/master/charts/cassandra
+    urls:
+    - https://gokube.github.io/miniapps/cassandra-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
+  cilium:
+  - appVersion: 1.1.0
+    created: 2018-09-07T13:50:37.693303213Z
+    description: Cilium brings API-aware network security filtering to Linux container
+      frameworks like Docker and Kubernetes.
+    digest: 241e529adaf2653f2c021400da30336f4b832257f6b2739a57c26db75e7649c3
+    icon: https://gokube.github.io/miniapps/icons/cilium.png
+    keywords:
+    - cilium
+    - network policy
+    maintainers:
+    - email: jerome.roucheton@gemalto.com
+      name: jroucheton
+    name: cilium
+    sources:
+    - https:///github.com/gokube/miniapps/tree/master/charts/cilium
+    urls:
+    - https://gokube.github.io/miniapps/cilium-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
+  heapster:
+  - appVersion: 1.3.0
+    created: 2018-09-07T13:50:37.693883079Z
+    description: Heapster enables Container Cluster Monitoring and Performance Analysis.
+    digest: 53cbe5df22991fb480c1e4c65174b498da7e69294105d34997cc62ac01a25440
+    icon: https://gokube.github.io/miniapps/icons/heapster.png
+    keywords:
+    - heapster
+    - monitoring
+    - perf
+    maintainers:
+    - email: jerome.roucheton@gemalto.com
+      name: jroucheton
+    name: heapster
+    sources:
+    - https:///github.com/gokube/miniapps/tree/master/charts/heapster
+    urls:
+    - https://gokube.github.io/miniapps/heapster-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
+  kibana:
+  - appVersion: 6.2.4
+    created: 2018-09-07T13:50:37.694854072Z
+    description: Kibana is an open source data visualization plugin for Elasticsearch.
+    digest: 2884ef008ef725c55192813b862c7c6e998711e556a70f0247ee83aaf1f16b00
+    icon: https://gokube.github.io/miniapps/icons/kibana.png
+    keywords:
+    - kibana
+    - logs
+    - logging
+    maintainers:
+    - email: jerome.roucheton@gemalto.com
+      name: jroucheton
+    name: kibana
+    sources:
+    - https:///github.com/gokube/miniapps/tree/master/charts/kibana
+    urls:
+    - https://gokube.github.io/miniapps/kibana-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
+  pact-broker:
+  - appVersion: 2.23.3-1
+    created: 2018-09-07T13:50:37.695306909Z
+    description: Pact Broker chart for developers.
+    digest: ad2a8e82468665703662a64c2f87264f9bc89b2168bb15929b7053a1d258f992
+    icon: https://gokube.github.io/miniapps/icons/pact-broker.png
+    keywords:
+    - pact broker
+    - pact
+    maintainers:
+    - email: jerome.roucheton@gemalto.com
+      name: jroucheton
+    name: pact-broker
+    sources:
+    - https:///github.com/gokube/miniapps/tree/master/charts/pact-broker
+    urls:
+    - https://gokube.github.io/miniapps/pact-broker-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
+generated: 2018-09-07T13:50:37.691803395Z

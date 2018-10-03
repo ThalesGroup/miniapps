@@ -1,6 +1,0 @@
-deployment:
-  replicas: 1
-  affinity: {}
-  nodeSelector: {}
-  tolerations: []
-  resources: {}
