@@ -1,0 +1,46 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: {{ .Chart.Name }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+        release: {{ .Release.Name }}
+    spec:
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      affinity:
+{{ toYaml .Values.deployment.affinity | indent 8 }}
+      nodeSelector:
+{{ toYaml .Values.deployment.nodeSelector | indent 8 }}
+      tolerations:
+{{ toYaml .Values.deployment.tolerations | indent 8 }}
+      imagePullSecrets:
+{{ toYaml .Values.global.docker.imagePullSecrets | indent 8 }}
+      containers:
+      - name: {{ .Chart.Name }}
+        image: docker.elastic.co/elasticsearch/elasticsearch-oss:{{ .Values.global.docker.imageTag }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http1
+          containerPort: 9200
+          protocol: TCP
+        - name: http2
+          containerPort: 9300
+          protocol: TCP
+        env:
+        - name: discovery.type
+          value: single-node
+        - name: ES_JAVA_OPTS
+          value: "-Xms512m -Xmx512m -Dhttp.proxyHost={{ .Values.proxy.http.host }} -Dhttp.proxyPort={{ .Values.proxy.http.port }} -Dhttps.proxyHost={{ .Values.proxy.http.host }} -Dhttps.proxyPort={{ .Values.proxy.http.port }}"
+        resources:
+{{ toYaml .Values.deployment.resources | indent 12 }}
+        terminationMessagePolicy: File

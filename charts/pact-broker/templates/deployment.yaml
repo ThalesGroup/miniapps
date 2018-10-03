@@ -1,0 +1,96 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+{{ include "{{ .Chart.Name }}.labels" . | indent 2 }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  replicas: {{ .Values.deployment.replicas }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      affinity:
+{{ toYaml .Values.deployment.affinity | indent 8 }}
+      nodeSelector:
+{{ toYaml .Values.deployment.nodeSelector | indent 8 }}
+      tolerations:
+{{ toYaml .Values.deployment.tolerations | indent 8 }}
+      containers:
+      - name: pact-broker
+        image: "dius/pact-broker:2.23.3-1"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        env:
+        - name: PACT_BROKER_DATABASE_USERNAME
+          value: pact_broker
+        - name: PACT_BROKER_DATABASE_PASSWORD
+          value: pact_broker
+        - name: PACT_BROKER_DATABASE_NAME
+          value: pact_broker
+        - name: PACT_BROKER_DATABASE_HOST
+          value: localhost
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 80
+          timeoutSeconds: 1
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 80
+          timeoutSeconds: 1
+        resources:
+{{ toYaml .Values.deployment.resources | indent 10 }}
+      - name: postgres
+        image: postgres:9.6
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5432
+          protocol: TCP
+        env:
+        - name: POSTGRES_PASSWORD
+          value: pact_broker
+        - name: POSTGRES_USER
+          value: pact_broker
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 5432
+          timeoutSeconds: 1
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 5432
+          timeoutSeconds: 1
+        resources:
+{{ toYaml .Values.deployment.resources | indent 10 }}
+      volumeMounts:
+      -  name: data
+         mountPath: /var/lib/postgresql/data
+    volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: {{ .Chart.Name }}-data

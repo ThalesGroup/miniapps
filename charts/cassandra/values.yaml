@@ -1,0 +1,14 @@
+deployment:
+  replicas: 1
+  affinity: {}
+  nodeSelector: {}
+  tolerations: []
+  resources: {}
+
+service:
+  type: NodePort
+  ports:
+    cqlsh:
+      nodePort: 31042
+
+persistent: true

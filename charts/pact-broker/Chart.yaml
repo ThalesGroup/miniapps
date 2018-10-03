@@ -1,0 +1,15 @@
+name: pact-broker
+version: 1.0.0
+appVersion: 2.23.3-1
+description: "Pact Broker chart for developers."
+keywords:
+- pact broker
+- pact
+icon: https://gemalto.github.io/miniapps/icons/pact-broker.png
+sources:
+- https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
+maintainers:
+- name: cvila
+  email: christophe.vila@gemalto.com
+- name: jroucheton
+  email: jerome.roucheton@gemalto.com

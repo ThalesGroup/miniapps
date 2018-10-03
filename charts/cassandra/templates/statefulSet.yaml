@@ -1,0 +1,60 @@
+kind: StatefulSet
+apiVersion: apps/v1beta1
+metadata:
+  name: {{ .Chart.Name }}
+spec:
+  serviceName: {{ .Chart.Name }}
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      affinity:
+{{ toYaml .Values.deployment.affinity | indent 8 }}
+      nodeSelector:
+{{ toYaml .Values.deployment.nodeSelector | indent 8 }}
+      tolerations:
+{{ toYaml .Values.deployment.tolerations | indent 8 }}
+      containers:
+      - name:  {{ .Chart.Name }}
+        imagePullPolicy: IfNotPresent
+        image: "{{ .Chart.Name }}:3.11.2"
+        env:
+        - name: MAX_HEAP_SIZE
+          value: 128M
+        - name: HEAP_NEWSIZE
+          value: 48M
+        ports:
+        - containerPort: 7000
+          name: intra-node
+          protocol: TCP
+        - containerPort: 7001
+          name: tls-intra-node
+          protocol: TCP
+        - containerPort: 7199
+          name: jmx
+          protocol: TCP
+        - containerPort: 9042
+          name: cql
+          protocol: TCP
+{{- if .Values.persistent }}
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/cassandra
+{{- end }}
+        terminationMessagePolicy: File
+{{- if .Values.persistent }}
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: cassandra-data
+{{- end }}
