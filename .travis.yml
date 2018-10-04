@@ -86,6 +86,6 @@ after_success:
        git add *.tgz index.yaml
        git status
        git commit -m "Travis deploy ${SHA}"
-       git push -f -q https://jroucheton:$GITHUB_API_KEY@github.com/gemalto/miniapps gh-pages
+       git push -f -q https://$GITHUB_USER:$GITHUB_API_KEY@github.com/$TRAVIS_REPO_SLUG gh-pages
       fi
     fi
