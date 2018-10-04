@@ -6,7 +6,6 @@ env:
     - HELM_URL=https://storage.googleapis.com/kubernetes-helm
     - HELM_TGZ=helm-v2.9.1-linux-amd64.tar.gz
     - TARGET_BR=gh-pages
-    - REPO_DIR=/home/travis/build/gemalto/miniapps/charts
     - GH_URL=https://gemalto.github.io/miniapps
     - YAMLLINT_VERSION=1.8.1
     - VERSION=1.0.0+build.${TRAVIS_BUILD_NUMBER}
@@ -23,8 +22,8 @@ install:
 script:
   # Check charts format
   - >
-     for dir in `ls ${REPO_DIR}`; do
-      helm lint ${REPO_DIR}/$dir
+     for dir in `ls $TRAVIS_BUILD_DIR`; do
+      helm lint $TRAVIS_BUILD_DIR/$dir
       if [ $? != 0 ]; then
        travis_terminate 1
       fi
@@ -49,9 +48,9 @@ after_success:
       pushd $BUILD_DIR
 
       # Iterate over all charts are package them
-      for dir in `ls ${REPO_DIR}`; do
-       helm dep update ${REPO_DIR}/$dir
-       helm package ${REPO_DIR}/$dir --version ${VERSION}
+      for dir in `ls $TRAVIS_BUILD_DIR`; do
+       helm dep update $TRAVIS_BUILD_DIR/$dir
+       helm package $TRAVIS_BUILD_DIR/$dir --version ${VERSION}
       done
 
       # Indexing of charts
