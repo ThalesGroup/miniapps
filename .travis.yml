@@ -47,6 +47,8 @@ after_success:
       # Push temporary directory to the stack
       pushd $BUILD_DIR
 
+      ls -R $TRAVIS_BUILD_DIR
+
       # Iterate over all charts are package them
       for dir in `ls $TRAVIS_BUILD_DIR`; do
        helm dep update $TRAVIS_BUILD_DIR/$dir
