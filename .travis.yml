@@ -22,6 +22,7 @@ install:
 script:
   # Check charts format
   - >
+     ls -R $TRAVIS_BUILD_DIR
      for dir in `ls $TRAVIS_BUILD_DIR`; do
       helm lint $TRAVIS_BUILD_DIR/$dir
       if [ $? != 0 ]; then
@@ -46,8 +47,6 @@ after_success:
 
       # Push temporary directory to the stack
       pushd $BUILD_DIR
-
-      ls -R $TRAVIS_BUILD_DIR
 
       # Iterate over all charts are package them
       for dir in `ls $TRAVIS_BUILD_DIR`; do
