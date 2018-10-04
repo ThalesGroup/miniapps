@@ -1,4 +1,4 @@
-name: monitoring
+name: grafana
 version: 1.0.0
 description: Manifests, dashboards, and alerting rules for ota-cloud monitoring.
 keywords:
