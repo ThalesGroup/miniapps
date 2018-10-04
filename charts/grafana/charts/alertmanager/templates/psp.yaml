@@ -4,7 +4,7 @@ kind: PodSecurityPolicy
 metadata:
   labels:
     app: {{ template "alertmanager.name" . }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
   name: {{ template "alertmanager.fullname" . }}

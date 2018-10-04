@@ -18,7 +18,7 @@ spec:
   selector:
     matchLabels:
       app: {{ template "grafana.fullname" . }}
-      chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
   namespaceSelector:
     matchNames:
       - {{ .Release.Namespace | quote }}

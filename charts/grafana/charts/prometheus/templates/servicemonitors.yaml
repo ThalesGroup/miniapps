@@ -13,7 +13,7 @@ items:
     metadata:
       labels:
         app: {{ $app }}
-        chart: {{ $chartName }}-{{ $chartVersion }}
+        chart: {{ $chartName }}-{{ $chartVersion | replace "+" "_" | lower }}
         heritage: {{ $releaseService }}
         prometheus: {{ $.Values.prometheusLabelValue | default $releaseName | quote }}
         release: {{ $releaseName }}

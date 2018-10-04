@@ -19,7 +19,7 @@ spec:
     matchLabels:
       alertmanager: {{ .Release.Name }}
       app: {{ template "alertmanager.name" . }}
-      chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
   namespaceSelector:
     matchNames:
       - {{ .Release.Namespace | quote }}

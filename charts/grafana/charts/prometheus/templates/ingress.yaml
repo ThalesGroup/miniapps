@@ -11,7 +11,7 @@ metadata:
   labels:
     prometheus: {{ .Values.prometheusLabelValue | default .Release.Name | quote }}
     app: {{ template "prometheus.name" . }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
 {{- if .Values.ingress.labels }}

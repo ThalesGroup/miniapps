@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   labels:
     app: "prometheus"
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
     heritage: {{ .Release.Service }}
     prometheus: {{ .Release.Name }}
     release: {{ .Release.Name }}

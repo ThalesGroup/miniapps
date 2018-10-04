@@ -4,7 +4,7 @@ kind: PodSecurityPolicy
 metadata:
   labels:
     app: {{ template "prometheus-operator.name" . }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
   name: {{ template "prometheus-operator.fullname" . }}
