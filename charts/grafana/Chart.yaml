@@ -1,5 +1,6 @@
 name: grafana
 version: 1.0.0
+appVersion: 5.0.0
 description: Manifests, dashboards, and alerting rules for ota-cloud monitoring.
 keywords:
 - grafana
