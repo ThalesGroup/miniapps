@@ -8,6 +8,10 @@ metadata:
     operator: prometheus
     release: {{ .Release.Name }}
   name: {{ template "prometheus-operator.fullname" . }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   replicas: 1
   template:

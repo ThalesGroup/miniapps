@@ -1,11 +1,11 @@
 {{- if .Values.rbacEnable }}
 {{- if .Values.pspEnable }}
-kind: ClusterRole
 {{- if .Capabilities.APIVersions.Has "rbac.authorization.k8s.io/v1beta1" }}
 apiVersion: rbac.authorization.k8s.io/v1beta1
 {{- else if .Capabilities.APIVersions.Has "rbac.authorization.k8s.io/v1alpha1" }}
 apiVersion: rbac.authorization.k8s.io/v1alpha1
 {{- end }}
+kind: ClusterRoleBinding
 metadata:
   labels:
     app: {{ template "prometheus-operator.name" . }}
@@ -13,11 +13,17 @@ metadata:
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
   name: psp-{{ template "prometheus-operator.fullname" . }}
-rules:
-- apiGroups: ['extensions']
-  resources: ['podsecuritypolicies']
-  verbs:     ['use']
-  resourceNames:
-  - {{ template "prometheus-operator.fullname" . }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: psp-{{ template "prometheus-operator.fullname" . }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ template "prometheus-operator.fullname" . }}
+    namespace: {{ .Release.Namespace }}
 {{- end }}
 {{- end }}
