@@ -29,7 +29,7 @@ Create a fully qualified server name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 */}}
 {{- define "grafana.server.fullname" -}}
-{{- printf "%s-%s" .Release.Name "grafana" | trunc 63 | trimSuffix "-" -}}
+{{- printf "%s-%s" .Release.Name "prometheus-grafana" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
 {{/*
