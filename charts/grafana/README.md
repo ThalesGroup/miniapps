@@ -1,6 +1,4 @@
-# kube-prometheus
-
-This is the helm chart equivalent of `contrib/kube-prometheus`.
+# Grafana
 
 # Prerequisites
 

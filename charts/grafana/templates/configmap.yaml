@@ -8,7 +8,7 @@ metadata:
     prometheus: {{ .Release.Name }}
     release: {{ .Release.Name }}
     role: alert-rules
-  name: {{ template "kube-prometheus.fullname" . }}
+  name: {{ template "grafana.fullname" . }}
 data:
 {{- if .Values.prometheusRules }}
 {{- $root := . }}
