@@ -23,9 +23,7 @@ script:
   # Check charts format
   - >
     for dir in `ls $TRAVIS_BUILD_DIR/charts`; do
-      if [ "$dir" != "grafana2" ]; then
-        helm lint $TRAVIS_BUILD_DIR/charts/$dir
-      fi
+      helm lint $TRAVIS_BUILD_DIR/charts/$dir
       if [ $? != 0 ]; then
         travis_terminate 1
       fi
