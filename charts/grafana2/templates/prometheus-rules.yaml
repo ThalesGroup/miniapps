@@ -1,5 +1,7 @@
 {{- $labels := "" -}}
 {{- $value := "" -}}
+{{- define "humanize" -}}
+{{- end -}}
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
