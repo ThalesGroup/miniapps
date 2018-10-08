@@ -9,6 +9,6 @@ spec:
   baseImage: quay.io/prometheus/alertmanager
   nodeSelector:
     beta.kubernetes.io/os: linux
-  replicas: 3
+  replicas: 1
   serviceAccountName: alertmanager-main
   version: v0.15.2
