@@ -998,7 +998,7 @@ spec:
         severity: warning
     - alert: PrometheusTSDBReloadsFailing
       annotations:
-        description: '{{$labels.job}} at {{$labels.instance}} had {{$value | humanize}} reload failures over the last four hours.'
+        description: '{{$labels.job}} at {{$labels.instance}} had {{$value}} reload failures over the last four hours.'
         summary: Prometheus has issues reloading data blocks from disk
       expr: |
         increase(prometheus_tsdb_reloads_failures_total{job="prometheus-k8s"}[2h]) > 0
@@ -1007,7 +1007,7 @@ spec:
         severity: warning
     - alert: PrometheusTSDBCompactionsFailing
       annotations:
-        description: '{{$labels.job}} at {{$labels.instance}} had {{$value | humanize}} compaction failures over the last four hours.'
+        description: '{{$labels.job}} at {{$labels.instance}} had {{$value}} compaction failures over the last four hours.'
         summary: Prometheus has issues compacting sample blocks
       expr: |
         increase(prometheus_tsdb_compactions_failed_total{job="prometheus-k8s"}[2h]) > 0
