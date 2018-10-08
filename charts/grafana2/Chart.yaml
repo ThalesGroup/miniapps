@@ -1,0 +1,16 @@
+name: grafana2
+version: 1.0.0
+appVersion: 5.0.0
+description: Manifests, dashboards, and alerting rules for ota-cloud monitoring.
+keywords:
+- grafana
+- prometheus
+- monitoring
+icon: https://gemalto.github.io/miniapps/icons/grafana.png
+sources:
+- https:///github.com/gemalto/miniapps/tree/master/charts/grafana
+maintainers:
+- name: cvila
+  email: christophe.vila@gemalto.com
+- name: jroucheton
+  email: jerome.roucheton@gemalto.com
