@@ -3,6 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: alertmanagers.monitoring.coreos.com
+  annotations:
+    "helm.sh/hook": crd-install
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   group: monitoring.coreos.com
   names:
