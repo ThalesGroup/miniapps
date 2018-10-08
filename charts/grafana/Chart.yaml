@@ -1,7 +1,7 @@
 name: grafana
 version: 1.0.0
 appVersion: 5.0.0
-description: Manifests, dashboards, and alerting rules for ota-cloud monitoring.
+description: The open platform for beautiful analytics and monitoring
 keywords:
 - grafana
 - prometheus
