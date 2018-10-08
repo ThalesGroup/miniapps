@@ -6,6 +6,7 @@ metadata:
   name: alertmanager-main
   namespace: monitoring
 spec:
+  type: NodePort
   ports:
   - name: web
     port: 9093
