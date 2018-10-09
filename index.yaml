@@ -44,7 +44,7 @@ entries:
     created: 2018-09-07T13:50:37.693883079Z
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
     digest: 53cbe5df22991fb480c1e4c65174b498da7e69294105d34997cc62ac01a25440
-    icon: https://gokube.github.io/miniapps/icons/heapster.png
+    icon: https://gemalto.github.io/miniapps/icons/heapster.png
     keywords:
     - heapster
     - monitoring
@@ -63,7 +63,7 @@ entries:
     created: 2018-09-07T13:50:37.694854072Z
     description: Kibana is an open source data visualization plugin for Elasticsearch.
     digest: 2884ef008ef725c55192813b862c7c6e998711e556a70f0247ee83aaf1f16b00
-    icon: https://gokube.github.io/miniapps/icons/kibana.png
+    icon: https://gemalto.github.io/miniapps/icons/kibana.png
     keywords:
     - kibana
     - logs
@@ -82,7 +82,7 @@ entries:
     created: 2018-09-07T13:50:37.695306909Z
     description: Pact Broker chart for developers.
     digest: ad2a8e82468665703662a64c2f87264f9bc89b2168bb15929b7053a1d258f992
-    icon: https://gokube.github.io/miniapps/icons/pact-broker.png
+    icon: https://gemalto.github.io/miniapps/icons/pact-broker.png
     keywords:
     - pact broker
     - pact
