@@ -7,7 +7,7 @@ entries:
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
     digest: c60ab375892f427ddfc23e8eba69d9a888c4fb5dc59795e3ef21b4384508622b
-    icon: https://gokube.github.io/miniapps/icons/cassandra.png
+    icon: https://gemalto.github.io/miniapps/icons/cassandra.png
     keywords:
     - cassandra
     - database
@@ -16,9 +16,9 @@ entries:
       name: jroucheton
     name: cassandra
     sources:
-    - https:///github.com/gokube/miniapps/tree/master/charts/cassandra
+    - https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
     urls:
-    - https://gokube.github.io/miniapps/cassandra-1.0.0+build.22.tgz
+    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.22.tgz
     version: 1.0.0+build.22
   cilium:
   - appVersion: 1.1.0
@@ -26,7 +26,7 @@ entries:
     description: Cilium brings API-aware network security filtering to Linux container
       frameworks like Docker and Kubernetes.
     digest: 241e529adaf2653f2c021400da30336f4b832257f6b2739a57c26db75e7649c3
-    icon: https://gokube.github.io/miniapps/icons/cilium.png
+    icon: https://gemalto.github.io/miniapps/icons/cilium.png
     keywords:
     - cilium
     - network policy
@@ -35,9 +35,9 @@ entries:
       name: jroucheton
     name: cilium
     sources:
-    - https:///github.com/gokube/miniapps/tree/master/charts/cilium
+    - https:///github.com/gemalto/miniapps/tree/master/charts/cilium
     urls:
-    - https://gokube.github.io/miniapps/cilium-1.0.0+build.22.tgz
+    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.22.tgz
     version: 1.0.0+build.22
   heapster:
   - appVersion: 1.3.0
@@ -54,9 +54,9 @@ entries:
       name: jroucheton
     name: heapster
     sources:
-    - https:///github.com/gokube/miniapps/tree/master/charts/heapster
+    - https:///github.com/gemalto/miniapps/tree/master/charts/heapster
     urls:
-    - https://gokube.github.io/miniapps/heapster-1.0.0+build.22.tgz
+    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.22.tgz
     version: 1.0.0+build.22
   kibana:
   - appVersion: 6.2.4
@@ -73,9 +73,9 @@ entries:
       name: jroucheton
     name: kibana
     sources:
-    - https:///github.com/gokube/miniapps/tree/master/charts/kibana
+    - https:///github.com/gemalto/miniapps/tree/master/charts/kibana
     urls:
-    - https://gokube.github.io/miniapps/kibana-1.0.0+build.22.tgz
+    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.22.tgz
     version: 1.0.0+build.22
   pact-broker:
   - appVersion: 2.23.3-1
@@ -91,8 +91,8 @@ entries:
       name: jroucheton
     name: pact-broker
     sources:
-    - https:///github.com/gokube/miniapps/tree/master/charts/pact-broker
+    - https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://gokube.github.io/miniapps/pact-broker-1.0.0+build.22.tgz
+    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.22.tgz
     version: 1.0.0+build.22
 generated: 2018-09-07T13:50:37.691803395Z
