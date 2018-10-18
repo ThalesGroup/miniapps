@@ -26,8 +26,6 @@ spec:
 {{ toYaml .Values.deployment.nodeSelector | indent 8 }}
       tolerations:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
-      imagePullSecrets:
-{{ toYaml .Values.global.docker.imagePullSecrets | indent 8 }}
       containers:
       - name: {{ .Chart.Name }}
         image: percona/percona-server:5.7
