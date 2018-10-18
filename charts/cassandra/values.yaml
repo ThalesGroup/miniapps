@@ -1,4 +1,5 @@
 deployment:
+  jobBackoffLimit: 5
   replicas: 1
   affinity: {}
   nodeSelector: {}
