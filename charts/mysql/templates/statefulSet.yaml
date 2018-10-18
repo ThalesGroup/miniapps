@@ -30,6 +30,9 @@ spec:
       - name: {{ .Chart.Name }}
         image: percona/percona-server:5.7
         imagePullPolicy: IfNotPresent
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: fKX8oqg68Rd7Q9xy9ea56u7WIkg=86
         ports:
         - containerPort: 3306
           protocol: TCP
