@@ -2,97 +2,128 @@ apiVersion: v1
 entries:
   cassandra:
   - appVersion: 3.11.2
-    created: 2018-09-07T13:50:37.692363426Z
+    created: 2018-10-18T09:18:19.180287671Z
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
-    digest: c60ab375892f427ddfc23e8eba69d9a888c4fb5dc59795e3ef21b4384508622b
+    digest: a9af5198977d6689e1356902b764cafae2628b33d95fe88eecf1a6696d0cd5df
     icon: https://gemalto.github.io/miniapps/icons/cassandra.png
     keywords:
     - cassandra
     - database
     maintainers:
+    - email: christophe.vila@gemalto.com
+      name: cvila
     - email: jerome.roucheton@gemalto.com
       name: jroucheton
     name: cassandra
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
     urls:
-    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.22.tgz
-    version: 1.0.0+build.22
+    - https://.github.io/miniapps/cassandra-1.0.0+build.4.tgz
+    version: 1.0.0+build.4
   cilium:
   - appVersion: 1.1.0
-    created: 2018-09-07T13:50:37.693303213Z
+    created: 2018-10-18T09:18:19.180956827Z
     description: Cilium brings API-aware network security filtering to Linux container
       frameworks like Docker and Kubernetes.
-    digest: 241e529adaf2653f2c021400da30336f4b832257f6b2739a57c26db75e7649c3
+    digest: 9fdcf62a288e7c5094200432be626e8c5f2a32c81bb594d800ee706dafdb9bd5
     icon: https://gemalto.github.io/miniapps/icons/cilium.png
     keywords:
     - cilium
     - network policy
     maintainers:
+    - email: christophe.vila@gemalto.com
+      name: cvila
     - email: jerome.roucheton@gemalto.com
       name: jroucheton
     name: cilium
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cilium
     urls:
-    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.22.tgz
-    version: 1.0.0+build.22
+    - https://.github.io/miniapps/cilium-1.0.0+build.4.tgz
+    version: 1.0.0+build.4
+  grafana:
+  - appVersion: 5.0.0
+    created: 2018-10-18T09:18:19.187811029Z
+    description: The open platform for beautiful analytics and monitoring
+    digest: 846008151c5e1f5e186e6dc9b4ed3bc68c80b9c7583ceb7f6f11e888d3bc802e
+    icon: https://gemalto.github.io/miniapps/icons/grafana.png
+    keywords:
+    - grafana
+    - prometheus
+    - monitoring
+    maintainers:
+    - email: christophe.vila@gemalto.com
+      name: cvila
+    - email: jerome.roucheton@gemalto.com
+      name: jroucheton
+    name: grafana
+    sources:
+    - https:///github.com/gemalto/miniapps/tree/master/charts/grafana
+    urls:
+    - https://.github.io/miniapps/grafana-1.0.0+build.4.tgz
+    version: 1.0.0+build.4
   heapster:
   - appVersion: 1.3.0
-    created: 2018-09-07T13:50:37.693883079Z
+    created: 2018-10-18T09:18:19.188181458Z
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
-    digest: 53cbe5df22991fb480c1e4c65174b498da7e69294105d34997cc62ac01a25440
+    digest: b0ed4e584eb99bde055495a0d3fe9d991ecbee9a7cf94101f99bace2942f7717
     icon: https://gemalto.github.io/miniapps/icons/heapster.png
     keywords:
     - heapster
     - monitoring
     - perf
     maintainers:
+    - email: christophe.vila@gemalto.com
+      name: cvila
     - email: jerome.roucheton@gemalto.com
       name: jroucheton
     name: heapster
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/heapster
     urls:
-    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.22.tgz
-    version: 1.0.0+build.22
+    - https://.github.io/miniapps/heapster-1.0.0+build.4.tgz
+    version: 1.0.0+build.4
   kibana:
   - appVersion: 6.2.4
-    created: 2018-09-07T13:50:37.694854072Z
+    created: 2018-10-18T09:18:19.18887784Z
     description: Kibana is an open source data visualization plugin for Elasticsearch.
-    digest: 2884ef008ef725c55192813b862c7c6e998711e556a70f0247ee83aaf1f16b00
+    digest: 4812b62430e23f5fd86cf9394efe25ff86d95029a5b81eb9d3a7ae5d1d0b01b1
     icon: https://gemalto.github.io/miniapps/icons/kibana.png
     keywords:
     - kibana
     - logs
     - logging
     maintainers:
+    - email: christophe.vila@gemalto.com
+      name: cvila
     - email: jerome.roucheton@gemalto.com
       name: jroucheton
     name: kibana
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/kibana
     urls:
-    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.22.tgz
-    version: 1.0.0+build.22
+    - https://.github.io/miniapps/kibana-1.0.0+build.4.tgz
+    version: 1.0.0+build.4
   pact-broker:
   - appVersion: 2.23.3-1
-    created: 2018-09-07T13:50:37.695306909Z
+    created: 2018-10-18T09:18:19.18917391Z
     description: Pact Broker chart for developers.
-    digest: ad2a8e82468665703662a64c2f87264f9bc89b2168bb15929b7053a1d258f992
+    digest: dfdbc33209964192cfe7f88038190fd318b252dded5b5d7efd34789cf17466a3
     icon: https://gemalto.github.io/miniapps/icons/pact-broker.png
     keywords:
     - pact broker
     - pact
     maintainers:
+    - email: christophe.vila@gemalto.com
+      name: cvila
     - email: jerome.roucheton@gemalto.com
       name: jroucheton
     name: pact-broker
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.22.tgz
-    version: 1.0.0+build.22
-generated: 2018-09-07T13:50:37.691803395Z
+    - https://.github.io/miniapps/pact-broker-1.0.0+build.4.tgz
+    version: 1.0.0+build.4
+generated: 2018-10-18T09:18:19.17978282Z
