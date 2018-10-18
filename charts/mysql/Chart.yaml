@@ -1,7 +1,7 @@
 name: mysql
 version: 3.0.0
 appVersion: 5.7
-description: "Percona Server is an enhanced drop-in replacement for MySQL."
+description: "The world's most popular open source database"
 keywords:
 - mysql
 - database
