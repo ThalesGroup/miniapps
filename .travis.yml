@@ -6,8 +6,7 @@ env:
     - HELM_URL=https://storage.googleapis.com/kubernetes-helm
     - HELM_TGZ=helm-v2.9.1-linux-amd64.tar.gz
     - TARGET_BR=gh-pages
-    - REPO_DIR=/home/travis/build/gemalto/miniapps/charts
-    - GH_URL=https://gemalto.github.io/miniapps
+    - GH_URL=https://${GITHUB_OWNER}.github.io/miniapps
     - YAMLLINT_VERSION=1.8.1
     - VERSION=1.0.0+build.${TRAVIS_BUILD_NUMBER}
 
@@ -23,12 +22,12 @@ install:
 script:
   # Check charts format
   - >
-     for dir in `ls ${REPO_DIR}`; do
-      helm lint ${REPO_DIR}/$dir
+    for dir in `ls $TRAVIS_BUILD_DIR/charts`; do
+      helm lint $TRAVIS_BUILD_DIR/charts/$dir
       if [ $? != 0 ]; then
-       travis_terminate 1
+        travis_terminate 1
       fi
-     done
+    done
   # Check YAML styling
   # - yamllint -c .yamllint.yml -s .travis.yml .yamllint.yml
   # - yamllint -c .yamllint.yml -s $(find . -type f -name "Chart.yaml")
@@ -49,9 +48,9 @@ after_success:
       pushd $BUILD_DIR
 
       # Iterate over all charts are package them
-      for dir in `ls ${REPO_DIR}`; do
-       helm dep update ${REPO_DIR}/$dir
-       helm package ${REPO_DIR}/$dir --version ${VERSION}
+      for dir in `ls $TRAVIS_BUILD_DIR/charts`; do
+       helm dep update $TRAVIS_BUILD_DIR/charts/$dir
+       helm package $TRAVIS_BUILD_DIR/charts/$dir --version ${VERSION}
       done
 
       # Indexing of charts
@@ -86,6 +85,6 @@ after_success:
        git add *.tgz index.yaml
        git status
        git commit -m "Travis deploy ${SHA}"
-       git push -f -q https://jroucheton:$GITHUB_API_KEY@github.com/gemalto/miniapps gh-pages
+       git push -f -q https://$GITHUB_USER:$GITHUB_API_KEY@github.com/$TRAVIS_REPO_SLUG gh-pages
       fi
     fi

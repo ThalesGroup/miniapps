@@ -1,0 +1,16 @@
+name: grafana
+version: 1.0.0
+appVersion: 5.0.0
+description: The open platform for beautiful analytics and monitoring
+keywords:
+- grafana
+- prometheus
+- monitoring
+icon: https://gemalto.github.io/miniapps/icons/grafana.png
+sources:
+- https:///github.com/gemalto/miniapps/tree/master/charts/grafana
+maintainers:
+- name: cvila
+  email: christophe.vila@gemalto.com
+- name: jroucheton
+  email: jerome.roucheton@gemalto.com
