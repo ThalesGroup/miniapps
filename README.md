@@ -9,5 +9,5 @@ MiniApps contains the following apps:
 * [Heapster](https://github.com/gemalto/miniapps/charts/heapster)
 * [Cilium](https://github.com/gemalto/miniapps/charts/cilium)
 * [Kibana](https://github.com/gemalto/miniapps/charts/kibana)
-* [Grafaba](https://github.com/gemalto/miniapps/charts/grafana)
+* [Grafana](https://github.com/gemalto/miniapps/charts/grafana)
 * [Pact](https://github.com/gemalto/miniapps/charts/pact)
