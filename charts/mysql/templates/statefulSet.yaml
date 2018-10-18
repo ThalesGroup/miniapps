@@ -1,0 +1,49 @@
+kind: StatefulSet
+apiVersion: apps/v1beta1
+metadata:
+  name: {{ .Chart.Name }}
+spec:
+  serviceName: {{ .Chart.Name }}
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+        release: {{ .Release.Name }}
+    spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      affinity:
+{{ toYaml .Values.deployment.affinity | indent 8 }}
+      nodeSelector:
+{{ toYaml .Values.deployment.nodeSelector | indent 8 }}
+      tolerations:
+{{ toYaml .Values.deployment.tolerations | indent 8 }}
+      imagePullSecrets:
+{{ toYaml .Values.global.docker.imagePullSecrets | indent 8 }}
+      containers:
+      - name: {{ .Chart.Name }}
+        image: percona/percona-server:5.7
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3306
+          protocol: TCP
+{{- if .Values.persistent }}
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/mysql
+{{- end }}
+        terminationMessagePolicy: File
+{{- if .Values.persistent }}
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: mysql-data
+{{- end }}

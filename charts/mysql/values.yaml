@@ -1,0 +1,15 @@
+deployment:
+  jobBackoffLimit: 5
+  replicas: 1
+  affinity: {}
+  nodeSelector: {}
+  tolerations: []
+  resources: {}
+
+service:
+  type: NodePort
+  ports:
+    mysql:
+      nodePort: 31306
+
+persistent: true
