@@ -20,7 +20,7 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
     urls:
-    - https://.github.io/miniapps/cassandra-1.0.0+build.4.tgz
+    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.4.tgz
     version: 1.0.0+build.4
   cilium:
   - appVersion: 1.1.0
@@ -41,7 +41,7 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cilium
     urls:
-    - https://.github.io/miniapps/cilium-1.0.0+build.4.tgz
+    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.4.tgz
     version: 1.0.0+build.4
   grafana:
   - appVersion: 5.0.0
@@ -62,7 +62,7 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/grafana
     urls:
-    - https://.github.io/miniapps/grafana-1.0.0+build.4.tgz
+    - https://gemalto.github.io/miniapps/grafana-1.0.0+build.4.tgz
     version: 1.0.0+build.4
   heapster:
   - appVersion: 1.3.0
@@ -83,7 +83,7 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/heapster
     urls:
-    - https://.github.io/miniapps/heapster-1.0.0+build.4.tgz
+    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.4.tgz
     version: 1.0.0+build.4
   kibana:
   - appVersion: 6.2.4
@@ -104,7 +104,7 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/kibana
     urls:
-    - https://.github.io/miniapps/kibana-1.0.0+build.4.tgz
+    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.4.tgz
     version: 1.0.0+build.4
   pact-broker:
   - appVersion: 2.23.3-1
@@ -124,6 +124,6 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://.github.io/miniapps/pact-broker-1.0.0+build.4.tgz
+    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.4.tgz
     version: 1.0.0+build.4
 generated: 2018-10-18T09:18:19.17978282Z
