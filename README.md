@@ -6,8 +6,9 @@ MiniApps is a charts repository for publishing services which are useful for dev
 
 MiniApps contains the following apps:
 * [Cassandra](https://github.com/gemalto/miniapps/charts/cassandra)
-* [Heapster](https://github.com/gemalto/miniapps/charts/heapster)
 * [Cilium](https://github.com/gemalto/miniapps/charts/cilium)
+* [Grafana](https://github.com/gemalto/miniapps/charts/grafana)
+* [Heapster](https://github.com/gemalto/miniapps/charts/heapster)
 * [Kibana](https://github.com/gemalto/miniapps/charts/kibana)
-* [Grafaba](https://github.com/gemalto/miniapps/charts/grafana)
-* [Pact](https://github.com/gemalto/miniapps/charts/pact)
+* [Mysql](https://github.com/gemalto/miniapps/charts/mysql)
+* [Pact-Broker](https://github.com/gemalto/miniapps/charts/pact-broker)
