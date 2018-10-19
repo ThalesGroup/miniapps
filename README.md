@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.com/gemalto/miniapps.svg?branch=master)](https://travis-ci.com/gokube/miniapps)
+[![Build Status](https://api.travis-ci.com/gemalto/miniapps.svg?branch=master)](https://travis-ci.com/gemalto/miniapps)
 
 # What is MiniApps?
 
