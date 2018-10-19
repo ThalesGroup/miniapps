@@ -6,6 +6,7 @@ MiniApps is a charts repository for publishing services which are useful for dev
 
 MiniApps contains the following apps:
 * [Cassandra](https://github.com/gemalto/miniapps/tree/master/charts/cassandra)
+* [MySQL](https://github.com/gemalto/miniapps/tree/master/charts/mysql)
 * [Heapster](https://github.com/gemalto/miniapps/tree/master/charts/heapster)
 * [Cilium](https://github.com/gemalto/miniapps/tree/master/charts/cilium)
 * [Kibana](https://github.com/gemalto/miniapps/tree/master/charts/kibana)
