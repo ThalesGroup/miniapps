@@ -1,9 +1,11 @@
 # MySQL
 
-This chart bootstraps a ${project.name} deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
-This chart is built using Crypto Keys database.
+This chart bootstraps a MySQL deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Changelog
+
+Version 3.0.0
+* First delivery as official miniapps
 
 Version 2.0.0
 * Rename service to mysql-0 as cassandra
