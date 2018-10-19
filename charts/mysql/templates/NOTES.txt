@@ -1,0 +1,16 @@
+
+Thank you for installing ${project.name}
+Your release is named: {{ .Release.Name }}
+
+Internal access: mysql-0:3306
+External access: 192.168.99.100:31306
+
+To verify that {{ .Chart.Name }} has started, run:
+  kubectl --namespace={{ .Release.Namespace }} get pods -l "app={{ .Chart.Name }}"
+
+To learn more about the release, try:
+  $ helm status {{ .Release.Name }}
+  $ helm get {{ .Release.Name }}
+
+
+Enjoy!

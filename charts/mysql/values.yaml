@@ -9,7 +9,7 @@ deployment:
 service:
   type: NodePort
   ports:
-    cqlsh:
-      nodePort: 31042
+    mysql:
+      nodePort: 31306
 
 persistent: true
