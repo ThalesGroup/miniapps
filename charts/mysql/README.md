@@ -1,4 +1,4 @@
-# ${project.name}
+# MySQL
 
 This chart bootstraps a ${project.name} deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 This chart is built using Crypto Keys database.
