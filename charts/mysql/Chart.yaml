@@ -5,7 +5,7 @@ description: "The world's most popular open source database"
 keywords:
 - mysql
 - database
-icon: https://gemalto.github.io/miniapps/icons/cassandra.png
+icon: https://gemalto.github.io/miniapps/icons/mysql.png
 sources:
 - https:///github.com/gemalto/miniapps/tree/master/charts/mysql
 maintainers:
