@@ -3,6 +3,13 @@
 This chart bootstraps a [grafana](https://grafana.com) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 This chart is built from the kube-prometheus manifests which embeds prometheus-operator
 
+
+## Changelog
+
+Version 1.0.0
+* First release
+
+
 ## Installing the Chart
 
 To install the chart with the release name `my-release`:

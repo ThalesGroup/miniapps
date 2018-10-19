@@ -5,6 +5,13 @@ This chart is based on the Kibana docker image v6.2.4 and adds the following dep
 * [elasticsearch](https://www.elastic.co/fr/products/elasticsearch) based on the docker image v6.2.4
 * [filebeat](https://www.elastic.co/products/beats/filebeat) based on the docker image v6.2.4
 
+
+## Changelog
+
+Version 1.0.0
+* First release
+
+
 ## Installing the Chart
 
 To install the chart with the release name `my-release`:

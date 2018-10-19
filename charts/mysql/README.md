@@ -3,14 +3,12 @@
 This chart bootstraps a ${project.name} deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 This chart is built using Crypto Keys database.
 
+
 ## Changelog
 
-Version 2.0.0
-* Rename service to mysql-0 as cassandra
+Version 1.0.0
+* First release
 
-Version 1.1.0
-* Add a dedicated service for mysql
-* Remove release name as a prefix for resources
 
 ## Installing the Chart
 

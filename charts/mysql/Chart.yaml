@@ -1,5 +1,5 @@
 name: mysql
-version: 3.0.0
+version: 1.0.0
 appVersion: 5.7
 description: "The world's most popular open source database"
 keywords:
