@@ -1,15 +1,9 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: proxy
----
 apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
   labels:
     run: proxy
   name: proxy
-  namespace: proxy
 spec:
   template:
     metadata:
