@@ -2,4 +2,4 @@ global:
   httpProxy: http://10.43.216.8:8080
   httpsProxy: http://10.43.216.8:8080
 ds:
-  image: cvila84/any-proxy:1.0
+  image: cvila84/any-proxy:1.0.1
