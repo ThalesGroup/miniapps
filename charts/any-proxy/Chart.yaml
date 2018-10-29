@@ -1,5 +1,5 @@
 name: any-proxy
-version: 1.0.1
+version: 1.0.0
 appVersion: 1.0.1
 description: Manage proxy connections for applications that can't handle it
 keywords:
