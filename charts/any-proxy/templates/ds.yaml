@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: proxy
+---
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    run: proxy
+  name: proxy
+  namespace: proxy
+spec:
+  template:
+    metadata:
+      labels:
+        run: proxy
+    spec:
+      containers:
+      - image: {{ .Values.ds.image }}
+        name: iptables
+        securityContext:
+          privileged: true
+        env:
+        - name: "http_proxy"
+          value: {{ .Values.global.httpProxy }}
+        - name: "https_proxy"
+          value: {{ .Values.global.httpsProxy }}
+      hostNetwork: true

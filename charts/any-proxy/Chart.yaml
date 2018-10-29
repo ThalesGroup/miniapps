@@ -1,0 +1,8 @@
+name: any-proxy
+version: 1.0
+appVersion: 1.0
+description: Manage proxy connections for applications that can't handle it
+keywords:
+- go-any-proxy
+sources:
+- https://github.com/ryanchapman/go-any-proxy
