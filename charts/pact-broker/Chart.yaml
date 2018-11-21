@@ -1,5 +1,5 @@
 name: pact-broker
-version: 1.0.0
+version: 1.0.1
 appVersion: 2.23.3-1
 description: "Pact Broker chart for developers."
 keywords:
@@ -13,3 +13,5 @@ maintainers:
   email: christophe.vila@gemalto.com
 - name: jroucheton
   email: jerome.roucheton@gemalto.com
+- name: jberger
+  email: julien.cozzone-berger@gemalto.com
