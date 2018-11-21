@@ -91,7 +91,7 @@ spec:
         resources:
 {{ toYaml .Values.deployment.resources | indent 10 }}
         volumeMounts:
-        -  name: data
+        - name: data
           mountPath: /var/lib/postgresql/data
     volumes:
     - name: data
