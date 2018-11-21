@@ -4,6 +4,9 @@ This chart bootstraps a Pact Borker deployment on a [Kubernetes](http://kubernet
 
 ## Changelog
 
+Version 1.0.1
+* Add custom config for nginx in order to increase max POST size.
+
 Version 1.0.0
 * First release
 
