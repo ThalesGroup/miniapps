@@ -93,10 +93,10 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /var/lib/postgresql/data
-    volumes:
-    - name: data
-      persistentVolumeClaim:
-        claimName: {{ .Chart.Name }}-data
-    - name: nginx-conf
-      configMap:
-        name: pact-broker-nginx-conf
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: {{ .Chart.Name }}-data
+      - name: nginx-conf
+        configMap:
+          name: pact-broker-nginx-conf
