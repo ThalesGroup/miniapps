@@ -1,12 +1,25 @@
 apiVersion: v1
 entries:
+  any-proxy:
+  - appVersion: 1.0.1
+    created: 2018-11-22T10:53:57.710440032Z
+    description: Manage proxy connections for applications that can't handle it
+    digest: c13ded639e31c2e76857337b576d0737b69072f8994747f04cb599cecb02443d
+    keywords:
+    - go-any-proxy
+    name: any-proxy
+    sources:
+    - https://github.com/ryanchapman/go-any-proxy
+    urls:
+    - https://gemalto.github.io/miniapps/any-proxy-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   cassandra:
   - appVersion: 3.11.2
-    created: 2018-11-22T10:53:54.823346247Z
+    created: 2018-11-22T10:53:57.711208378Z
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
-    digest: c8d16cfdd15fb5d5344a92a1da281649627c31c0237c2bd6e9bdd416a6b1a54c
+    digest: c5139bdba035f67647507f1c38ed1832d8dac09feb18b58aafa6124e3741609a
     icon: https://gemalto.github.io/miniapps/icons/cassandra.png
     keywords:
     - cassandra
@@ -20,14 +33,14 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
     urls:
-    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
+    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   cilium:
   - appVersion: 1.1.0
-    created: 2018-11-22T10:53:54.824267877Z
+    created: 2018-11-22T10:53:57.712000653Z
     description: Cilium brings API-aware network security filtering to Linux container
       frameworks like Docker and Kubernetes.
-    digest: dd2ff5baac71f7d5f14aafde6d787bcb42c7cf9239a9dba8015634a4c15dae4e
+    digest: 9128a19bdfe2fb03ed251f111b1314d2dc22bd77c520ffce86ac17181083166c
     icon: https://gemalto.github.io/miniapps/icons/cilium.png
     keywords:
     - cilium
@@ -41,13 +54,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cilium
     urls:
-    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
+    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   grafana:
   - appVersion: 5.0.0
-    created: 2018-11-22T10:53:54.830806083Z
+    created: 2018-11-22T10:53:57.71749247Z
     description: The open platform for beautiful analytics and monitoring
-    digest: 70cf73f73ced60fa8671b1795a6c6c239aa833a17f5e6fe3573d4da97d1286fe
+    digest: 8a5e8d2c61942733f572d511a995d6e401d31393eaa75259712ba8bcd87e1641
     icon: https://gemalto.github.io/miniapps/icons/grafana.png
     keywords:
     - grafana
@@ -62,13 +75,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/grafana
     urls:
-    - https://gemalto.github.io/miniapps/grafana-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
+    - https://gemalto.github.io/miniapps/grafana-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   heapster:
   - appVersion: 1.3.0
-    created: 2018-11-22T10:53:54.831151172Z
+    created: 2018-11-22T10:53:57.717842589Z
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
-    digest: 118129e55a5342a6e141fd28f56c489b00cb29d44a4f8238247309dbdc62a099
+    digest: 3996460ea00ce287d8c3e2ee12de98b4d5154bd2d40a0a29b3adc81fddfebabe
     icon: https://gemalto.github.io/miniapps/icons/heapster.png
     keywords:
     - heapster
@@ -83,13 +96,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/heapster
     urls:
-    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
+    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   kibana:
   - appVersion: 6.2.4
-    created: 2018-11-22T10:53:54.831838773Z
+    created: 2018-11-22T10:53:57.718525697Z
     description: Kibana is an open source data visualization plugin for Elasticsearch.
-    digest: af019928319033373220efeb0f323a6c2d19f80d398e804bf1de62016e01ffa9
+    digest: 27a4de09f7edb3bf83d497131c56670067585400381b28079645c26fe94eac92
     icon: https://gemalto.github.io/miniapps/icons/kibana.png
     keywords:
     - kibana
@@ -104,13 +117,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/kibana
     urls:
-    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
+    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   mysql:
   - appVersion: "5.7"
-    created: 2018-11-22T10:53:54.832125267Z
+    created: 2018-11-22T10:53:57.718818154Z
     description: The world's most popular open source database
-    digest: c2b14d9d4404a98215ba9e575b789144fbbb0216d9c74b5c28260d93c1c0d0bf
+    digest: 8f0bcc9cfdbeb6415c2b097f84579bdf9f8685050ed4ad4db8ca587c9efaec24
     icon: https://gemalto.github.io/miniapps/icons/mysql.png
     keywords:
     - mysql
@@ -124,13 +137,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/mysql
     urls:
-    - https://gemalto.github.io/miniapps/mysql-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
+    - https://gemalto.github.io/miniapps/mysql-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
   pact-broker:
   - appVersion: 2.23.3-1
-    created: 2018-11-22T10:53:54.832575256Z
+    created: 2018-11-22T10:53:57.719201273Z
     description: Pact Broker chart for developers.
-    digest: e70f42363a498976c975f8b07094bec74ea34218311081148227f584fb2b9d0e
+    digest: 2c6ef658aeea53d052af8e195fdd26d5ff54492280ebf9062c633ba4b07cf0b4
     icon: https://gemalto.github.io/miniapps/icons/pact-broker.png
     keywords:
     - pact broker
@@ -146,6 +159,6 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.14.tgz
-    version: 1.0.0+build.14
-generated: 2018-11-22T10:53:54.822286422Z
+    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.15.tgz
+    version: 1.0.0+build.15
+generated: 2018-11-22T10:53:57.709521385Z
