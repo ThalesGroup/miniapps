@@ -58,6 +58,9 @@ spec:
           timeoutSeconds: 1
         resources:
 {{ toYaml .Values.deployment.resources | indent 10 }}
+        volumeMounts:
+        - name: nginx-conf
+          mountPath: /etc/nginx/conf.d
       - name: postgres
         image: postgres:9.6
         imagePullPolicy: IfNotPresent
@@ -87,10 +90,13 @@ spec:
           timeoutSeconds: 1
         resources:
 {{ toYaml .Values.deployment.resources | indent 10 }}
-      volumeMounts:
-      -  name: data
-         mountPath: /var/lib/postgresql/data
-    volumes:
-    - name: data
-      persistentVolumeClaim:
-        claimName: {{ .Chart.Name }}-data
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: {{ .Chart.Name }}-data
+      - name: nginx-conf
+        configMap:
+          name: pact-broker-nginx-conf
