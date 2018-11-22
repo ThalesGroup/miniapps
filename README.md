@@ -5,6 +5,7 @@
 MiniApps is a charts repository for publishing services which are useful for developers on [GoKube](https://github.com/gemalto/gokube)
 
 MiniApps contains the following apps:
+* [Any-Proxy](https://github.com/gemalto/miniapps/charts/any-proxy)
 * [Cassandra](https://github.com/gemalto/miniapps/charts/cassandra)
 * [Cilium](https://github.com/gemalto/miniapps/charts/cilium)
 * [Grafana](https://github.com/gemalto/miniapps/charts/grafana)
