@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: etherpad-mysql-config
+data:
+  database.name: "etherpaddb"
+  database.user: "etherpad"
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: etherpad-config
+data:
+  port: "80"
+  session_key: "55ED1519-7079-4E08-9739-0B069BF1D8B2"
+  admin_user: "admin"
+  database.host: "127.0.0.1"
+  database.port: "3306"
+  database.name: "etherpaddb"
+  database.user: "etherpad"
