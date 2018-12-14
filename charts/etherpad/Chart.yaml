@@ -8,7 +8,7 @@ keywords:
 - tool
 - notes
 - collaborative
-icon: https://www.cloudwatt.com/fr/images/applications/logos/etherpad-logo.png
+icon: https://gemalto.github.io/miniapps/icons/etherpad.png
 sources:
 - https:///github.com/gemalto/miniapps/tree/master/charts/etherpad
 maintainers:
