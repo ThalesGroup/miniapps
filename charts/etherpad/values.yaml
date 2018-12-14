@@ -1,0 +1,13 @@
+deployment:
+  jobBackoffLimit: 5
+  replicas: 1
+  affinity: {}
+  nodeSelector: {}
+  tolerations: []
+  resources: {}
+
+service:
+  type: NodePort
+  ports:
+    etherpad:
+      nodePort: 31900

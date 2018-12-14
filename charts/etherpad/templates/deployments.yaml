@@ -1,0 +1,98 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: etherpad
+{{ include "{{ .Chart.Name }}.labels" . | indent 2 }}
+spec:
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: mysql
+        env:
+        - name: MYSQL_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-mysql-config
+              key: database.name
+        - name: MYSQL_USER
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-mysql-config
+              key: database.user
+        - name: MYSQL_PASSWORD
+          value: "123456"
+        - name: MYSQL_ROOT_PASSWORD
+          value: "12345678"
+        ports:
+        - containerPort: 3306
+          name: mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 512
+          limits:
+            cpu: 200m
+            memory: 1Gi
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      - image: tvelocity/etherpad-lite:latest
+        name: etherpad
+        env:
+        - name: ETHERPAD_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: port
+        - name: ETHERPAD_SESSION_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: session_key
+        - name: ETHERPAD_ADMIN_USER
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: admin_user
+        - name: ETHERPAD_ADMIN_PASSWORD
+          value: "12456"
+        - name: ETHERPAD_DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: database.host
+        - name: ETHERPAD_DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: database.port
+        - name: ETHERPAD_DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: database.name
+        - name: ETHERPAD_DB_USER
+          valueFrom:
+            configMapKeyRef:
+              name: etherpad-config
+              key: database.user
+        - name: ETHERPAD_DB_PASSWORD
+          value: "123456"
+        ports:
+        - containerPort: 80
+          name: http
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 512Mi
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-storage

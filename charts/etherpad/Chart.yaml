@@ -1,0 +1,16 @@
+name: etherpad
+version: 1.0.0
+appVersion: 1.0
+description: "The world's most popular open source collaborative notes tool"
+keywords:
+- etherpad
+- pad
+- tool
+- notes
+- collaborative
+icon: https://www.cloudwatt.com/fr/images/applications/logos/etherpad-logo.png
+sources:
+- https:///github.com/gemalto/miniapps/tree/master/charts/etherpad
+maintainers:
+- name: jberger
+  email: julien.cozzone-berger@gemalto.com

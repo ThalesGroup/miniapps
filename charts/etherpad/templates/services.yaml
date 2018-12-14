@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Chart.Name }}
+{{ include "{{ .Chart.Name }}.labels" . | indent 2 }}
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: {{ .Values.service.ports.etherpad.nodePort }}
+  selector:
+    app: etherpad
+  type: LoadBalancer
