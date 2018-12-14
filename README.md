@@ -13,3 +13,4 @@ MiniApps contains the following apps:
 * [Kibana](https://github.com/gemalto/miniapps/charts/kibana)
 * [Mysql](https://github.com/gemalto/miniapps/charts/mysql)
 * [Pact-Broker](https://github.com/gemalto/miniapps/charts/pact-broker)
+* [Etherpad](https://github.com/gemalto/miniapps/charts/etherpad)
