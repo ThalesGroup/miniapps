@@ -2,24 +2,24 @@ apiVersion: v1
 entries:
   any-proxy:
   - appVersion: 1.0.1
-    created: 2018-12-14T15:57:58.919446541Z
+    created: 2018-12-14T21:53:36.109851232Z
     description: Manage proxy connections for applications that can't handle it
-    digest: e44fd2aecea932970afcfc764cff032570d54feebdfd3be7d2f8be972d4c91a6
+    digest: d3a737516de77d94384c955b8b520f4b22896b8d7f03315714cf4f6d25a39a23
     keywords:
     - go-any-proxy
     name: any-proxy
     sources:
     - https://github.com/ryanchapman/go-any-proxy
     urls:
-    - https://gemalto.github.io/miniapps/any-proxy-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/any-proxy-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   cassandra:
   - appVersion: 3.11.2
-    created: 2018-12-14T15:57:58.920212066Z
+    created: 2018-12-14T21:53:36.11070827Z
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
-    digest: c777202f06bfd4b73e0257cf0bd804e947ccdc8d28620d57b2f926546bfe264c
+    digest: 190a56dbd306de043eb4dd94ce8e1aef37b417c2d9d58495d88832bdd225f42b
     icon: https://gemalto.github.io/miniapps/icons/cassandra.png
     keywords:
     - cassandra
@@ -33,14 +33,14 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
     urls:
-    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/cassandra-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   cilium:
   - appVersion: 1.1.0
-    created: 2018-12-14T15:57:58.921055522Z
+    created: 2018-12-14T21:53:36.111550623Z
     description: Cilium brings API-aware network security filtering to Linux container
       frameworks like Docker and Kubernetes.
-    digest: c2b3063412a2b95d0406fe269f782731cd965158672cddc5a60468d126336ac5
+    digest: 6a3333904ff8dd7cbb41d9b62c82442f6c16465595807256d76bc64a81958833
     icon: https://gemalto.github.io/miniapps/icons/cilium.png
     keywords:
     - cilium
@@ -54,14 +54,14 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/cilium
     urls:
-    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/cilium-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   etherpad:
   - appVersion: "1"
-    created: 2018-12-14T15:57:58.921673947Z
+    created: 2018-12-14T21:53:36.112185482Z
     description: The world's most popular open source collaborative notes tool
-    digest: b04b9d6ce755b279bb01ccc40f2108d58e1f2397e1e3a10e5863c2dec5f0ec25
-    icon: https://www.cloudwatt.com/fr/images/applications/logos/etherpad-logo.png
+    digest: 5034ac7fb7387b0ea7590dcf2589cada68345e889edc6aa0fdf289a53e3600bc
+    icon: https://gemalto.github.io/miniapps/icons/etherpad.png
     keywords:
     - etherpad
     - pad
@@ -75,13 +75,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/etherpad
     urls:
-    - https://gemalto.github.io/miniapps/etherpad-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/etherpad-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   grafana:
   - appVersion: 5.0.0
-    created: 2018-12-14T15:57:58.926980824Z
+    created: 2018-12-14T21:53:36.117674185Z
     description: The open platform for beautiful analytics and monitoring
-    digest: d2c960d69cc85ed54ebadb13cf018de3cfe61dae4c18fd222d8cf5836569b3b2
+    digest: 41b7bc12b524a87645964bc1f5bb3d5b27053f2ad7d885de28b59ee2c82fd862
     icon: https://gemalto.github.io/miniapps/icons/grafana.png
     keywords:
     - grafana
@@ -96,13 +96,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/grafana
     urls:
-    - https://gemalto.github.io/miniapps/grafana-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/grafana-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   heapster:
   - appVersion: 1.3.0
-    created: 2018-12-14T15:57:58.927321069Z
+    created: 2018-12-14T21:53:36.118029769Z
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
-    digest: 6110fdc5d1aea24173500d9c55f9dc8a288c9fe1aaac848c7187c4bd8c00656d
+    digest: 3218e0e107522434e16e95fe4de346da77da216612dc342f821b75f32c611307
     icon: https://gemalto.github.io/miniapps/icons/heapster.png
     keywords:
     - heapster
@@ -117,13 +117,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/heapster
     urls:
-    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/heapster-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   kibana:
   - appVersion: 6.2.4
-    created: 2018-12-14T15:57:58.927927723Z
+    created: 2018-12-14T21:53:36.118650001Z
     description: Kibana is an open source data visualization plugin for Elasticsearch.
-    digest: a0d1eb7a1ae368ac58bf4941f5be6c757f1e71a019e5edd4687f2d24f9e7aa31
+    digest: 9f9bd2844fc4e8400d64c2744d177ac2b6c9dab07d73c6acee3fe8bd6a43a204
     icon: https://gemalto.github.io/miniapps/icons/kibana.png
     keywords:
     - kibana
@@ -138,13 +138,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/kibana
     urls:
-    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/kibana-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   mysql:
   - appVersion: "5.7"
-    created: 2018-12-14T15:57:58.928204726Z
+    created: 2018-12-14T21:53:36.118952019Z
     description: The world's most popular open source database
-    digest: be54df19f6a1928084308837d9f4b7e696dd9e42a233661389f8d90d964b94bc
+    digest: d3d4fdf2ecc407b4d22cd8be604f11f894c226fe0b586ac8d0bd62f8ffefdc3f
     icon: https://gemalto.github.io/miniapps/icons/mysql.png
     keywords:
     - mysql
@@ -158,13 +158,13 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/mysql
     urls:
-    - https://gemalto.github.io/miniapps/mysql-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
+    - https://gemalto.github.io/miniapps/mysql-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
   pact-broker:
   - appVersion: 2.23.3-1
-    created: 2018-12-14T15:57:58.928567437Z
+    created: 2018-12-14T21:53:36.119349674Z
     description: Pact Broker chart for developers.
-    digest: 7f9bab2d6c6df539724f01b679010cc91703a9d01d83ecfa87db6023a8bcf8c0
+    digest: da948b2aba974aa984781cef7143621fb7ccbca453c0e114747eee02bbe34e90
     icon: https://gemalto.github.io/miniapps/icons/pact-broker.png
     keywords:
     - pact broker
@@ -180,6 +180,6 @@ entries:
     sources:
     - https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.18.tgz
-    version: 1.0.0+build.18
-generated: 2018-12-14T15:57:58.918836554Z
+    - https://gemalto.github.io/miniapps/pact-broker-1.0.0+build.20.tgz
+    version: 1.0.0+build.20
+generated: 2018-12-14T21:53:36.109105551Z
