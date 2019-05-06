@@ -12,4 +12,7 @@ service:
     mysql:
       nodePort: 31306
 
+pvc:
+  volumeName:
+
 persistent: true

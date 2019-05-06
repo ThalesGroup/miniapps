@@ -12,4 +12,7 @@ service:
     cqlsh:
       nodePort: 31042
 
+pvc:
+  volumeName:
+
 persistent: true

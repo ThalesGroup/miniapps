@@ -8,5 +8,8 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Gi
+{{- if .Values.pvc.volumeName }}
+  volumeName: {{ .Values.pvc.volumeName }}
+{{- end }}
 {{- end }}
