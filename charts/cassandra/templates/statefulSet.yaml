@@ -30,9 +30,9 @@ spec:
         image: "{{ .Chart.Name }}:3.11.2"
         env:
         - name: MAX_HEAP_SIZE
-          value: 160M
+          value: {{ .Values.deployment.memory.maxHeapSize }}
         - name: HEAP_NEWSIZE
-          value: 64M
+          value: {{ .Values.deployment.memory.heapNewSize }}
         ports:
         - containerPort: 7000
           name: intra-node
