@@ -7,7 +7,7 @@ deployment:
   resources: {}
   memory:
     maxHeapSize: 160M
-    newHeapSize: 64M
+    heapNewSize: 64M
 
 service:
   type: NodePort
