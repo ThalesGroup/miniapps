@@ -2,25 +2,25 @@ apiVersion: v1
 entries:
   any-proxy:
   - appVersion: 1.0.1
-    created: 2020-03-14T17:00:00.596233377Z
+    created: 2020-03-14T17:07:37.20690089Z
     description: Manage proxy connections for applications that can't handle it
-    digest: 7c015d5e8e6b380f159c497d7946b2064428ec604ecbed7c7dba001b136d507b
+    digest: 78f16a2453644a754307af7cb9398451ffffc2a5bb46a2856a770e25a2a43b38
     keywords:
     - go-any-proxy
     name: any-proxy
     sources:
     - https://github.com/ryanchapman/go-any-proxy
     urls:
-    - https://thalesgroup.github.io/miniapps/any-proxy-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/any-proxy-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   cassandra:
   - appVersion: 3.11.2
-    created: 2020-03-14T17:00:00.5968841Z
+    created: 2020-03-14T17:07:37.207510381Z
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
-    digest: cc59ad89412ee6ce216cdee1705d29eb43a8f023ea99850a25c9c89abf99d71a
-    icon: https://gemalto.github.io/miniapps/icons/cassandra.png
+    digest: ed6cd417c4c581edb70f5ab7bc5422ed9e0896c88b077294b867716fb2f76af2
+    icon: https://thalesgroup.github.io/miniapps/icons/cassandra.png
     keywords:
     - cassandra
     - database
@@ -31,17 +31,17 @@ entries:
       name: jroucheton
     name: cassandra
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/cassandra
     urls:
-    - https://thalesgroup.github.io/miniapps/cassandra-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/cassandra-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   cilium:
   - appVersion: 1.1.0
-    created: 2020-03-14T17:00:00.597552195Z
+    created: 2020-03-14T17:07:37.208209466Z
     description: Cilium brings API-aware network security filtering to Linux container
       frameworks like Docker and Kubernetes.
-    digest: 9fdcf62a288e7c5094200432be626e8c5f2a32c81bb594d800ee706dafdb9bd5
-    icon: https://gemalto.github.io/miniapps/icons/cilium.png
+    digest: 953ec102caf1c3ecf476d180e66dc2bf44b657bb791548eea7766b49a48fd1e2
+    icon: https://thalesgroup.github.io/miniapps/icons/cilium.png
     keywords:
     - cilium
     - network policy
@@ -52,16 +52,16 @@ entries:
       name: jroucheton
     name: cilium
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/cilium
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/cilium
     urls:
-    - https://thalesgroup.github.io/miniapps/cilium-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/cilium-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   etherpad:
   - appVersion: "1"
-    created: 2020-03-14T17:00:00.598120804Z
+    created: 2020-03-14T17:07:37.208767839Z
     description: The world's most popular open source collaborative notes tool
-    digest: 5457424668a7f8160f939b95a6a4e97ecbe989b4278d3a6f1d42a17f380c2e07
-    icon: https://gemalto.github.io/miniapps/icons/etherpad.png
+    digest: c926a6905b7c84f6fc7e2845bd3262c001add0deeb69272302b1ce78a3c7ea45
+    icon: https://thalesgroup.github.io/miniapps/icons/etherpad.png
     keywords:
     - etherpad
     - pad
@@ -73,16 +73,16 @@ entries:
       name: jberger
     name: etherpad
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/etherpad
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/etherpad
     urls:
-    - https://thalesgroup.github.io/miniapps/etherpad-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/etherpad-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   grafana:
   - appVersion: 5.0.0
-    created: 2020-03-14T17:00:00.602120942Z
+    created: 2020-03-14T17:07:37.212926614Z
     description: The open platform for beautiful analytics and monitoring
-    digest: 5a512f776fcf7f25dec77bd90ad1ec3ed492b47e5c6ef3f5a5f9f20676ebc94c
-    icon: https://gemalto.github.io/miniapps/icons/grafana.png
+    digest: 0fd9cbbf5b56edcdb4c9833b17a5e1b99fc2e1cdb6347b6a5b945fe1b0f8c0c4
+    icon: https://thalesgroup.github.io/miniapps/icons/grafana.png
     keywords:
     - grafana
     - prometheus
@@ -94,16 +94,16 @@ entries:
       name: jroucheton
     name: grafana
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/grafana
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/grafana
     urls:
-    - https://thalesgroup.github.io/miniapps/grafana-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/grafana-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   heapster:
   - appVersion: 1.3.0
-    created: 2020-03-14T17:00:00.602413534Z
+    created: 2020-03-14T17:07:37.21320401Z
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
-    digest: b0ed4e584eb99bde055495a0d3fe9d991ecbee9a7cf94101f99bace2942f7717
-    icon: https://gemalto.github.io/miniapps/icons/heapster.png
+    digest: 6241e51549812293d19f2b6b4a98cb39a6d7cbc62005e3562f4650cf7a15d50f
+    icon: https://thalesgroup.github.io/miniapps/icons/heapster.png
     keywords:
     - heapster
     - monitoring
@@ -115,16 +115,16 @@ entries:
       name: jroucheton
     name: heapster
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/heapster
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/heapster
     urls:
-    - https://thalesgroup.github.io/miniapps/heapster-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/heapster-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   kibana:
   - appVersion: 6.2.4
-    created: 2020-03-14T17:00:00.602888112Z
+    created: 2020-03-14T17:07:37.213686411Z
     description: Kibana is an open source data visualization plugin for Elasticsearch.
-    digest: 65cfac8c23a18966e1d9c382ee3b36ab0758f78ef983daaa0bd51ce698368a6f
-    icon: https://gemalto.github.io/miniapps/icons/kibana.png
+    digest: 17231cc6d4e0f7d1fc1b52ab474a6ba98b570052549cbafb74c37fd987bd44f6
+    icon: https://thalesgroup.github.io/miniapps/icons/kibana.png
     keywords:
     - kibana
     - logs
@@ -136,16 +136,16 @@ entries:
       name: jroucheton
     name: kibana
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/kibana
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/kibana
     urls:
-    - https://thalesgroup.github.io/miniapps/kibana-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/kibana-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   mysql:
   - appVersion: "5.7"
-    created: 2020-03-14T17:00:00.60310304Z
+    created: 2020-03-14T17:07:37.213933358Z
     description: The world's most popular open source database
-    digest: e028376c50c5ebf23e2e6370d3f578012bdd642307260ed3d96b072e4e17083b
-    icon: https://gemalto.github.io/miniapps/icons/mysql.png
+    digest: 3102e5171faaae1e8ef2eac28e17c18a3ba57c84a25988da3a93c6deb4862f45
+    icon: https://thalesgroup.github.io/miniapps/icons/mysql.png
     keywords:
     - mysql
     - database
@@ -156,16 +156,16 @@ entries:
       name: cvila
     name: mysql
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/mysql
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/mysql
     urls:
-    - https://thalesgroup.github.io/miniapps/mysql-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
+    - https://thalesgroup.github.io/miniapps/mysql-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
   pact-broker:
   - appVersion: 2.23.3-1
-    created: 2020-03-14T17:00:00.60335299Z
+    created: 2020-03-14T17:07:37.214221228Z
     description: Pact Broker chart for developers.
-    digest: a6e33f64c3df8b9a88472e6a8df9f7f585555484ae2527b63a791cf76a995a26
-    icon: https://gemalto.github.io/miniapps/icons/pact-broker.png
+    digest: 4ff30ac924d88ce3e6fdcd56cad38e1ee622f21468c8083f3fec26ccfabe1e03
+    icon: https://thalesgroup.github.io/miniapps/icons/pact-broker.png
     keywords:
     - pact broker
     - pact
@@ -178,8 +178,8 @@ entries:
       name: jberger
     name: pact-broker
     sources:
-    - https:///github.com/gemalto/miniapps/tree/master/charts/pact-broker
+    - https://github.com/thalesgroup/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://thalesgroup.github.io/miniapps/pact-broker-1.0.0+build.4.tgz
-    version: 1.0.0+build.4
-generated: 2020-03-14T17:00:00.595365877Z
+    - https://thalesgroup.github.io/miniapps/pact-broker-1.0.0+build.5.tgz
+    version: 1.0.0+build.5
+generated: 2020-03-14T17:07:37.206035018Z
