@@ -5,9 +5,9 @@ description: "Apache Cassandra is a free and open-source distributed database ma
 keywords:
 - cassandra
 - database
-icon: https://gemalto.github.io/miniapps/icons/cassandra.png
+icon: https://thalesgroup.github.io/miniapps/icons/cassandra.png
 sources:
-- https:///github.com/gemalto/miniapps/tree/master/charts/cassandra
+- https://github.com/thalesgroup/miniapps/tree/master/charts/cassandra
 maintainers:
 - name: cvila
   email: christophe.vila@gemalto.com

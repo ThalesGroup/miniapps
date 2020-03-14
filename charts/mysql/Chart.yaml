@@ -5,9 +5,9 @@ description: "The world's most popular open source database"
 keywords:
 - mysql
 - database
-icon: https://gemalto.github.io/miniapps/icons/mysql.png
+icon: https://thalesgroup.github.io/miniapps/icons/mysql.png
 sources:
-- https:///github.com/gemalto/miniapps/tree/master/charts/mysql
+- https://github.com/thalesgroup/miniapps/tree/master/charts/mysql
 maintainers:
 - name: jroucheton
   email: jerome.roucheton@gemalto.com

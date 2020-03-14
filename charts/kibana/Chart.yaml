@@ -6,9 +6,9 @@ keywords:
 - kibana
 - logs
 - logging
-icon: https://gemalto.github.io/miniapps/icons/kibana.png
+icon: https://thalesgroup.github.io/miniapps/icons/kibana.png
 sources:
-- https:///github.com/gemalto/miniapps/tree/master/charts/kibana
+- https://github.com/thalesgroup/miniapps/tree/master/charts/kibana
 maintainers:
 - name: cvila
   email: christophe.vila@gemalto.com

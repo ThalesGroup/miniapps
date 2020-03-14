@@ -8,9 +8,9 @@ keywords:
 - tool
 - notes
 - collaborative
-icon: https://gemalto.github.io/miniapps/icons/etherpad.png
+icon: https://thalesgroup.github.io/miniapps/icons/etherpad.png
 sources:
-- https:///github.com/gemalto/miniapps/tree/master/charts/etherpad
+- https://github.com/thalesgroup/miniapps/tree/master/charts/etherpad
 maintainers:
 - name: jberger
   email: julien.cozzone-berger@gemalto.com

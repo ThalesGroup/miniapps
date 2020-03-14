@@ -2,7 +2,7 @@
 
 # What is MiniApps?
 
-MiniApps is a charts repository for publishing services which are useful for developers on [GoKube](https://github.com/gemalto/gokube)
+MiniApps is a charts repository for publishing services which are useful for developers on [GoKube](https://github.com/thalesgroup/gokube)
 
 MiniApps contains the following apps:
 * [Any-Proxy](https://github.com/ThalesGroup/miniapps/charts/any-proxy)

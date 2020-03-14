@@ -6,9 +6,9 @@ keywords:
 - grafana
 - prometheus
 - monitoring
-icon: https://gemalto.github.io/miniapps/icons/grafana.png
+icon: https://thalesgroup.github.io/miniapps/icons/grafana.png
 sources:
-- https:///github.com/gemalto/miniapps/tree/master/charts/grafana
+- https://github.com/thalesgroup/miniapps/tree/master/charts/grafana
 maintainers:
 - name: cvila
   email: christophe.vila@gemalto.com

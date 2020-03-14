@@ -6,9 +6,9 @@ keywords:
 - heapster
 - monitoring
 - perf
-icon: https://gemalto.github.io/miniapps/icons/heapster.png
+icon: https://thalesgroup.github.io/miniapps/icons/heapster.png
 sources:
-- https:///github.com/gemalto/miniapps/tree/master/charts/heapster
+- https://github.com/thalesgroup/miniapps/tree/master/charts/heapster
 maintainers:
 - name: cvila
   email: christophe.vila@gemalto.com
