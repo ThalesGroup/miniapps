@@ -16,6 +16,7 @@ service:
       nodePort: 31042
 
 pvc:
+  storageClassName:
   volumeName:
 
 persistent: true

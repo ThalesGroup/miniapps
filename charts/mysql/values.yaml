@@ -13,6 +13,7 @@ service:
       nodePort: 31306
 
 pvc:
+  storageClassName:
   volumeName:
 
 persistent: true
