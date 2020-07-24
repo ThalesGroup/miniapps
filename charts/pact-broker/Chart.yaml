@@ -1,6 +1,6 @@
 name: pact-broker
-version: 1.0.1
-appVersion: 2.23.3-1
+version: 1.0.2
+appVersion: 2.58.0.0
 description: "Pact Broker chart for developers."
 keywords:
 - pact broker

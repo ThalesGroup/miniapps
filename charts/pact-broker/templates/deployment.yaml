@@ -26,7 +26,7 @@ spec:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
       containers:
       - name: pact-broker
-        image: "dius/pact-broker:2.23.3-1"
+        image: "dius/pact-broker:2.58.0.0"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
