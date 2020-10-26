@@ -6,8 +6,8 @@ deployment:
   tolerations: []
   resources: {}
   memory:
-    maxHeapSize: 160M
-    heapNewSize: 64M
+    maxHeapSize: 256M
+    heapNewSize: 96M
 
 service:
   type: NodePort
