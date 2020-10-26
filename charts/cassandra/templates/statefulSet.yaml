@@ -27,7 +27,7 @@ spec:
       containers:
       - name:  {{ .Chart.Name }}
         imagePullPolicy: IfNotPresent
-        image: "{{ .Chart.Name }}:3.11.2"
+        image: "{{ .Chart.Name }}:3.11.8"
         env:
         - name: MAX_HEAP_SIZE
           value: {{ .Values.deployment.memory.maxHeapSize }}
