@@ -3,7 +3,7 @@ language: python
 
 env:
   global:
-    - HELM_URL=https://storage.googleapis.com/kubernetes-helm
+    - HELM_URL=https://get.helm.sh
     - HELM_TGZ=helm-v2.9.1-linux-amd64.tar.gz
     - TARGET_BR=gh-pages
     - GH_URL=https://${GITHUB_OWNER}.github.io/miniapps
