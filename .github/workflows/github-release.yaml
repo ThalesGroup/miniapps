@@ -1,0 +1,78 @@
+name: Release on github
+on:
+  push:
+    tags:
+      - 'v*'
+env:
+  HELM_URL: https://get.helm.sh
+  HELM_TGZ: helm-v2.9.1-linux-amd64.tar.gz
+  TARGET_BR: gh-pages
+  GH_URL: https://thalesgroup.github.io/miniapps
+  VERSION: 1.0.0+build.$GITHUB_RUN_NUMBER
+
+jobs:
+  build:
+    name: Make release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          path: ${{ github.workspace }}/src/github.com/gemalto/gokube
+      - name: Make release
+        run: |
+          wget -q ${HELM_URL}/${HELM_TGZ}
+          tar xzfv ${HELM_TGZ}
+          PATH=`pwd`/linux-amd64/:$PATH
+          helm init --client-only
+          for dir in `ls $GITHUB_WORKSPACE/charts`; do
+            helm lint $GITHUB_WORKSPACE/charts/$dir
+            if [ $? != 0 ]; then
+              exit 1
+            fi
+          done
+          if [ $GITHUB_REF = 'refs/heads/master' ] && [ $GITHUB_BASE_REF = '' ]; then
+            # Temporary dir for storing new packaged charts and index files
+            BUILD_DIR=$(mktemp -d)
+            # Useful URLs
+            REPO_URL=`git config remote.origin.url`
+            SSH_REPO=${REPO_URL/https:\/\/github.com\//git@github.com:}
+            SHA=`git rev-parse --verify HEAD`
+            # Push temporary directory to the stack
+            pushd $BUILD_DIR
+            # Iterate over all charts are package them
+            for dir in `ls $GITHUB_WORKSPACE/charts`; do
+              helm dep update $GITHUB_WORKSPACE/charts/$dir
+              helm package $GITHUB_WORKSPACE/charts/$dir --version ${VERSION}
+            done
+            # Indexing of charts
+            if [ -f index.yaml ]; then
+              helm repo index --url ${GH_URL} --merge index.yaml .
+            else
+              helm repo index --url ${GH_URL} .
+            fi
+            # Pop temporary directory from the stack
+            popd
+            # List all the contents that we will push
+            ls ${BUILD_DIR}
+            # Clone repository and empty target branch
+            git clone ${REPO_URL} out
+            cd out
+            git checkout ${TARGET_BR} || git checkout --orphan ${TARGET_BR}
+            cd ..
+            rm -rf out/* || exit 0
+            # Copying contents of BUILD_DIR to out folder
+            cp $BUILD_DIR/* out/
+            cd out
+            # Deploy only if there are some changes
+            git diff --quiet
+            if [ $? != 0 ]; then
+              git config user.name "Github"
+              git config user.email "github@github.com"
+              #git add *.tgz index.yaml
+              #git status
+              #git commit -m "Github workflow deploy"
+              #git push -f -q https://{{ github.actor }}:{{ github.token }}@github.com/ThalesGroup/miniapps gh-pages
+            fi
+          fi
