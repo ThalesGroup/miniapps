@@ -45,7 +45,7 @@ jobs:
             # Iterate over all charts are package them
             for dir in `ls $GITHUB_WORKSPACE/charts`; do
               helm dep update $GITHUB_WORKSPACE/charts/$dir
-              helm package $GITHUB_WORKSPACE/charts/$dir --version ${VERSION}
+              helm package $GITHUB_WORKSPACE/charts/$dir --version "1.0.0+build.$GITHUB_RUN_NUMBER"
             done
             # Indexing of charts
             if [ -f index.yaml ]; then
