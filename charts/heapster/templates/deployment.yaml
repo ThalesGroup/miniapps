@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "heapster.fullname" . }}
@@ -10,6 +10,12 @@ metadata:
     {{ $key }}: {{ $value }}
     {{- end }}
 spec:
+  selector:
+    matchLabels:
+      chart: { { .Chart.Name } }-{{ .Chart.Version | replace "+" "_" | lower }}
+      {{- range $key, $value := .Values.labels }}
+      {{ $key }}: { { $value } }
+      { { - end } }
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
