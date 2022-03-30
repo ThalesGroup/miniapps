@@ -22,6 +22,7 @@ jobs:
       - name: Make release
         run: |
           set -x
+          set +e
           wget -q ${HELM_URL}/${HELM_TGZ}
           tar xzfv ${HELM_TGZ}
           PATH=`pwd`/linux-amd64/:$PATH
@@ -69,11 +70,14 @@ jobs:
             # Deploy only if there are some changes
             git diff --quiet
             if [ $? != 0 ]; then
-              git config user.name "Github"
-              git config user.email "github@github.com"
-              #git add *.tgz index.yaml
-              #git status
-              #git commit -m "Github workflow deploy"
-              #git push -f -q https://{{ github.actor }}:{{ github.token }}@github.com/ThalesGroup/miniapps gh-pages
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git add *.tgz index.yaml
+              git commit -m "Publish new release"
             fi
           fi
+      - name: Publish release
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
