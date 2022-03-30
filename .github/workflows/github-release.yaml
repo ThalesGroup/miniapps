@@ -21,6 +21,7 @@ jobs:
           path: ${{ github.workspace }}
       - name: Make release
         run: |
+          set -x
           wget -q ${HELM_URL}/${HELM_TGZ}
           tar xzfv ${HELM_TGZ}
           PATH=`pwd`/linux-amd64/:$PATH
@@ -30,6 +31,8 @@ jobs:
               exit 1
             fi
           done
+          echo GITHUB_REF=$GITHUB_REF
+          echo GITHUB_BASE_REF=$GITHUB_BASE_REF
           if [ $GITHUB_REF = 'refs/heads/master' ] && [ $GITHUB_BASE_REF = '' ]; then
             # Temporary dir for storing new packaged charts and index files
             BUILD_DIR=$(mktemp -d)
