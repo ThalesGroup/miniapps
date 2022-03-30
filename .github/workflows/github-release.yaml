@@ -24,7 +24,6 @@ jobs:
           wget -q ${HELM_URL}/${HELM_TGZ}
           tar xzfv ${HELM_TGZ}
           PATH=`pwd`/linux-amd64/:$PATH
-          helm init
           for dir in `ls $GITHUB_WORKSPACE/charts`; do
             helm lint $GITHUB_WORKSPACE/charts/$dir
             if [ $? != 0 ]; then
