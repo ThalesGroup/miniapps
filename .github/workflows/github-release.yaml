@@ -33,7 +33,7 @@ jobs:
           done
           echo GITHUB_REF=$GITHUB_REF
           echo GITHUB_BASE_REF=$GITHUB_BASE_REF
-          if [ $GITHUB_REF = 'refs/heads/master' ] && [ $GITHUB_BASE_REF = '' ]; then
+          if [ '$GITHUB_REF' = 'refs/heads/master' ] && [ '$GITHUB_BASE_REF' = '' ]; then
             # Temporary dir for storing new packaged charts and index files
             BUILD_DIR=$(mktemp -d)
             # Useful URLs
