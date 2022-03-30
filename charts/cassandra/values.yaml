@@ -8,6 +8,8 @@ deployment:
   memory:
     maxHeapSize: 256M
     heapNewSize: 96M
+  dockerRegistry: docker.io
+  containerVersion: 3.11.12
 
 service:
   type: NodePort

@@ -25,9 +25,9 @@ spec:
       tolerations:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
       containers:
-      - name:  {{ .Chart.Name }}
+      - name: {{ .Chart.Name }}
         imagePullPolicy: IfNotPresent
-        image: "{{ .Chart.Name }}:3.11.8"
+        image: {{ .Values.deployment.dockerRegistry }}/cassandra:{{ .Values.deployment.containerVersion }}
         env:
         - name: MAX_HEAP_SIZE
           value: {{ .Values.deployment.memory.maxHeapSize }}
