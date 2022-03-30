@@ -1,7 +1,7 @@
 apiVersion: v1
 name: grafana
-version: 1.0.0
-appVersion: 5.0.0
+version: "1.0.0"
+appVersion: "5.0.0"
 description: The open platform for beautiful analytics and monitoring
 keywords:
 - grafana

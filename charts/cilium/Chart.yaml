@@ -1,7 +1,7 @@
 apiVersion: v1
 name: cilium
-version: 1.0.0
-appVersion: 1.1.0
+version: "1.0.0"
+appVersion: "1.1.0"
 description: "Cilium brings API-aware network security filtering to Linux container frameworks like Docker and Kubernetes."
 keywords:
 - cilium
