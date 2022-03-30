@@ -1,3 +1,4 @@
+apiVersion: v1
 name: cassandra
 version: 1.0.0
 appVersion: 3.11.2
