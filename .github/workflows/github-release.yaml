@@ -74,10 +74,6 @@ jobs:
               git config user.email "github-actions[bot]@users.noreply.github.com"
               git add *.tgz index.yaml
               git commit -m "Publish new release"
+              git push https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git gh-pages
             fi
           fi
-      - name: Publish release
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
