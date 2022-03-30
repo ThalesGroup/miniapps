@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: etherpad
 {{ include "{{ .Chart.Name }}.labels" . | indent 2 }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:

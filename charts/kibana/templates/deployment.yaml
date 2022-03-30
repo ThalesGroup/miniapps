@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -8,6 +8,12 @@ metadata:
     release: {{ .Release.Name }}
   name: {{ .Chart.Name }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
+      heritage: {{ .Release.Service }}
+      release: {{ .Release.Name }}
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
