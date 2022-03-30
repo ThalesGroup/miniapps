@@ -12,10 +12,10 @@ metadata:
 spec:
   selector:
     matchLabels:
-      chart: { { .Chart.Name } }-{{ .Chart.Version | replace "+" "_" | lower }}
+      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
       {{- range $key, $value := .Values.labels }}
-      {{ $key }}: { { $value } }
-      { { - end } }
+      {{ $key }}: {{ $value }}
+      {{- end }}
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
