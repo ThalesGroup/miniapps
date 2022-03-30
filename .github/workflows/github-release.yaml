@@ -18,12 +18,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 1
-          path: ${{ github.workspace }}/src/github.com/gemalto/gokube
+          path: ${{ github.workspace }}
       - name: Make release
         run: |
           wget -q ${HELM_URL}/${HELM_TGZ}
           tar xzfv ${HELM_TGZ}
           PATH=`pwd`/linux-amd64/:$PATH
+          ls -lR $GITHUB_WORKSPACE
           for dir in `ls $GITHUB_WORKSPACE/charts`; do
             helm lint $GITHUB_WORKSPACE/charts/$dir
             if [ $? != 0 ]; then
