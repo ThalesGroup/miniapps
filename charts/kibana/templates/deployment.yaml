@@ -11,8 +11,6 @@ spec:
   selector:
     matchLabels:
       app: {{ .Chart.Name }}
-      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
-      heritage: {{ .Release.Service }}
       release: {{ .Release.Name }}
   replicas: {{ .Values.replicaCount }}
   template:

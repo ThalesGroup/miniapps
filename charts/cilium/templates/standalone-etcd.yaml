@@ -33,13 +33,16 @@ spec:
   selector:
     component: "cilium-etcd"
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: "etcd-cilium"
   labels:
     component: "cilium-etcd"
 spec:
+  selector:
+    matchLabels:
+      component: "cilium-etcd"
   serviceName: "cilium-etcd"
   template:
     metadata:

@@ -12,10 +12,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" | lower }}
-      {{- range $key, $value := .Values.labels }}
-      {{ $key }}: {{ $value }}
-      {{- end }}
+      app: {{ template "heapster.fullname" . }}
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
