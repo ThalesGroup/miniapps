@@ -18,6 +18,8 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: {{ .Values.deployment.imagePullSecrets }}
       affinity:
 {{ toYaml .Values.deployment.affinity | indent 8 }}
       nodeSelector:
