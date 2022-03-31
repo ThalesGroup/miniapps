@@ -10,7 +10,7 @@ deployment:
     heapNewSize: 96M
   dockerRegistry: docker.io
   containerVersion: 3.11.12
-  imagePullSecrets: dockerhub-gemalto
+#  imagePullSecrets:
 
 service:
   type: NodePort
