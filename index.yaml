@@ -3,25 +3,25 @@ entries:
   any-proxy:
   - apiVersion: v1
     appVersion: 1.0.1
-    created: "2022-03-31T08:31:35.195816401Z"
+    created: "2022-03-31T08:37:36.849769849Z"
     description: Manage proxy connections for applications that can't handle it
-    digest: 35373762fba3c996e9fa395820e639a96a8cfa9e263d5bdb5e8ffe111ffa9aaf
+    digest: 326dad94cd90ce8472c7896d784408a26dab4bf0aa3965d53e68a1fa1cf47ca8
     keywords:
     - go-any-proxy
     name: any-proxy
     sources:
     - https://github.com/ryanchapman/go-any-proxy
     urls:
-    - https://thalesgroup.github.io/miniapps/any-proxy-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/any-proxy-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   cassandra:
   - apiVersion: v1
     appVersion: 3.11.12
-    created: "2022-03-31T08:31:35.196325922Z"
+    created: "2022-03-31T08:37:36.850500448Z"
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
-    digest: e0924ec99db56346236f0ab00ef7ba7129ca204bb4304c285a0560d497713ba2
+    digest: 3559f9fb8441be893ba852eb8fc8a90581f0ec23e690e13c4c8d8d5851bbcce3
     icon: https://thalesgroup.github.io/miniapps/icons/cassandra.png
     keywords:
     - cassandra
@@ -35,15 +35,15 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/cassandra
     urls:
-    - https://thalesgroup.github.io/miniapps/cassandra-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/cassandra-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   cilium:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2022-03-31T08:31:35.197108756Z"
+    created: "2022-03-31T08:37:36.851545748Z"
     description: Cilium brings API-aware network security filtering to Linux container
       frameworks like Docker and Kubernetes.
-    digest: 88fcebb2f4e844dd88e519fbbe09cf2b5079e08dc188a6c48dffaed3ccc3d809
+    digest: 8e655569dcdc10d2bb6e5192339989026dd586fa7ef66d7e65228848826c2564
     icon: https://thalesgroup.github.io/miniapps/icons/cilium.png
     keywords:
     - cilium
@@ -57,14 +57,14 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/cilium
     urls:
-    - https://thalesgroup.github.io/miniapps/cilium-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/cilium-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   etherpad:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-03-31T08:31:35.197489472Z"
+    created: "2022-03-31T08:37:36.852103547Z"
     description: The world's most popular open source collaborative notes tool
-    digest: d673d2c04c62bc52117ecbfe70db1f890a429201cf32fc7b46d99d501aa78732
+    digest: bdd7cdce5b2321936529b665679cd3068be5b7dcb2d1909bca7bdcb7dfa6a417
     icon: https://thalesgroup.github.io/miniapps/icons/etherpad.png
     keywords:
     - etherpad
@@ -79,14 +79,14 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/etherpad
     urls:
-    - https://thalesgroup.github.io/miniapps/etherpad-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/etherpad-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   grafana:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2022-03-31T08:31:35.200763411Z"
+    created: "2022-03-31T08:37:36.857524942Z"
     description: The open platform for beautiful analytics and monitoring
-    digest: 07407f9b26339c5244e89e0b22ea3e5b01db8cb4d73904e254b0a021978a16ae
+    digest: 0953454c49b4ae96ebed620d236c65e0f441d4caa7dcbef43f8e8a4a40de4b22
     icon: https://thalesgroup.github.io/miniapps/icons/grafana.png
     keywords:
     - grafana
@@ -101,14 +101,14 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/grafana
     urls:
-    - https://thalesgroup.github.io/miniapps/grafana-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/grafana-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   heapster:
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2022-03-31T08:31:35.201370237Z"
+    created: "2022-03-31T08:37:36.858194942Z"
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
-    digest: f20b8d7e4acf26c63371a14c6892bc4a828cf34ece0221eab7eeee47d7a7cba2
+    digest: f72ebe133a4eee41db4b92713a9cb7566ed629bd8c5fa3544bb17bdd0122c706
     icon: https://thalesgroup.github.io/miniapps/icons/heapster.png
     keywords:
     - heapster
@@ -123,12 +123,12 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/heapster
     urls:
-    - https://thalesgroup.github.io/miniapps/heapster-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/heapster-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   kibana:
   - apiVersion: v1
     appVersion: 6.2.4
-    created: "2022-03-31T08:31:35.203446425Z"
+    created: "2022-03-31T08:37:36.859540041Z"
     dependencies:
     - name: elasticsearch
       repository: ""
@@ -137,7 +137,7 @@ entries:
       repository: ""
       version: 1.0.0
     description: Kibana is an open source data visualization plugin for Elasticsearch.
-    digest: 650ff44072265a7a8b0098f08a18ff006e6fb8004e22b46ed0f58d357efb5105
+    digest: 6bea6f93c839e00a57bd3c52c71a8d6b78fb2b606a7cf45ca7b56022e09e60af
     icon: https://thalesgroup.github.io/miniapps/icons/kibana.png
     keywords:
     - kibana
@@ -152,14 +152,14 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/kibana
     urls:
-    - https://thalesgroup.github.io/miniapps/kibana-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/kibana-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   mysql:
   - apiVersion: v1
     appVersion: "5.7"
-    created: "2022-03-31T08:31:35.203769139Z"
+    created: "2022-03-31T08:37:36.86027304Z"
     description: The world's most popular open source database
-    digest: 4b259e4d73034c1c328a2190f00e68a4e8759a30aacbfbf6b407f5d5cef4fe5d
+    digest: fb0c1cdd681c17b182bae1760913b9dc4a142dfff656591ee104f8ce72a17cad
     icon: https://thalesgroup.github.io/miniapps/icons/mysql.png
     keywords:
     - mysql
@@ -173,14 +173,14 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/mysql
     urls:
-    - https://thalesgroup.github.io/miniapps/mysql-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
+    - https://thalesgroup.github.io/miniapps/mysql-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
   pact-broker:
   - apiVersion: v1
     appVersion: 2.58.0.0
-    created: "2022-03-31T08:31:35.204077352Z"
+    created: "2022-03-31T08:37:36.86073154Z"
     description: Pact Broker chart for developers.
-    digest: af00e7fe07b9a131ed7664feeb35ec1538f2449309325c7a3ed26f4fc2824d2f
+    digest: 6f2d1a7b4894b65dab844253baf3f229618a1de168346676ee4c1384d2daa101
     icon: https://thalesgroup.github.io/miniapps/icons/pact-broker.png
     keywords:
     - pact broker
@@ -196,6 +196,6 @@ entries:
     sources:
     - https://github.com/thalesgroup/miniapps/tree/master/charts/pact-broker
     urls:
-    - https://thalesgroup.github.io/miniapps/pact-broker-1.0.0+build.21.tgz
-    version: 1.0.0+build.21
-generated: "2022-03-31T08:31:35.19532978Z"
+    - https://thalesgroup.github.io/miniapps/pact-broker-1.0.0+build.22.tgz
+    version: 1.0.0+build.22
+generated: "2022-03-31T08:37:36.84879375Z"
