@@ -20,6 +20,10 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+  {{- if .Values.deployment.imagePullSecrets }}
+      imagePullSecrets:
+      - name: {{ .Values.deployment.imagePullSecrets }}
+  {{- end }}
       affinity:
 {{ toYaml .Values.deployment.affinity | indent 8 }}
       nodeSelector:
@@ -28,7 +32,7 @@ spec:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
       containers:
       - name: {{ .Chart.Name }}
-        image: percona/percona-server:5.7
+        image: {{ .Values.deployment.dockerRegistry }}/percona/percona-server:{{ .Values.deployment.containerVersion }}
         imagePullPolicy: IfNotPresent
         env:
         - name: MYSQL_ROOT_PASSWORD

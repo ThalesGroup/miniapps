@@ -5,6 +5,9 @@ deployment:
   nodeSelector: {}
   tolerations: []
   resources: {}
+  dockerRegistry: docker.io
+  containerVersion: 5.7
+#  imagePullSecrets:
 
 service:
   type: NodePort
