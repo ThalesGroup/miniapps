@@ -28,6 +28,19 @@ spec:
 {{ toYaml .Values.deployment.nodeSelector | indent 8 }}
       tolerations:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
+      initContainers:
+      - name: setup-config
+        image: busybox:latest
+        command:
+        - sh
+        - "-c"
+        args:
+        - "cp -f /etc/cassandra-config/cassandra.yaml /etc/cassandra"
+        volumeMounts:
+        - name: config
+          mountPath: /etc/cassandra-config
+        - name: config-emptydir
+          mountPath: /etc/cassandra
       containers:
       - name: {{ .Chart.Name }}
         imagePullPolicy: IfNotPresent
@@ -54,6 +67,10 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /var/lib/cassandra
+        - name: config-emptydir
+          mountPath: /etc/cassandra/cassandra.yaml
+          subPath: cassandra.yaml
+        
 {{- end }}
         terminationMessagePolicy: File
 {{- if .Values.persistent }}
@@ -61,4 +78,10 @@ spec:
       - name: data
         persistentVolumeClaim:
           claimName: cassandra-data
+      - name: config
+        configMap:
+          name: cassandra-config
+          defaultMode: 0777
+      - name: config-emptydir
+        emptyDir: {}
 {{- end }}
