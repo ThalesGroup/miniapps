@@ -30,7 +30,7 @@ spec:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
       initContainers:
       - name: setup-config
-        image: busybox:latest
+        image: {{ .Values.deployment.dockerRegistry }}/busybox:latest
         command:
         - sh
         - "-c"
