@@ -1,7 +1,7 @@
 apiVersion: v1
 name: mysql
 version: "1.0.0"
-appVersion: "5.7"
+appVersion: "8.0.40"
 description: "The world's most popular open source database"
 keywords:
 - mysql
