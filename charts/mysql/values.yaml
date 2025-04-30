@@ -6,7 +6,7 @@ deployment:
   tolerations: []
   resources: {}
   dockerRegistry: docker.io
-  containerVersion: 8.0.40
+  containerVersion: 5.7
 #  imagePullSecrets:
 
 service:
