@@ -1,0 +1,18 @@
+apiVersion: v1
+name: mysql
+version: "1.0.0"
+appVersion: "8.7.4"
+description: "The world's most popular open source database"
+keywords:
+- mysql
+- database
+icon: https://thalesgroup.github.io/miniapps/icons/mysql.png
+sources:
+- https://github.com/thalesgroup/miniapps/tree/master/charts/mysql
+maintainers:
+- name: jroucheton
+  email: jerome.roucheton@gemalto.com
+- name: cvila
+  email: christophee.vila@gemalto.com
+- name: rfranco
+  email: richard.franco@thalesgroup.com

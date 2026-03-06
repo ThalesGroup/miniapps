@@ -1,0 +1,22 @@
+deployment:
+  jobBackoffLimit: 5
+  replicas: 1
+  affinity: {}
+  nodeSelector: {}
+  tolerations: []
+  resources: {}
+  dockerRegistry: docker.io
+  containerVersion: 8.7.4
+#  imagePullSecrets:
+
+service:
+  type: NodePort
+  ports:
+    mysql:
+      nodePort: 31306
+
+pvc:
+  storageClassName:
+  volumeName:
+
+persistent: true

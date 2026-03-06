@@ -1,0 +1,18 @@
+{{- if .Values.persistent }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ .Chart.Name }}-data
+spec:
+{{- if .Values.pvc.storageClassName }}
+  storageClassName: {{ .Values.pvc.storageClassName }}
+{{- end }}
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+{{- if .Values.pvc.volumeName }}
+  volumeName: {{ .Values.pvc.volumeName }}
+{{- end }}
+{{- end }}
