@@ -50,5 +50,5 @@ spec:
       volumes:
       - name: data
         persistentVolumeClaim:
-          claimName: mysql84-data
+          claimName: mysql-data
 {{- end }}
