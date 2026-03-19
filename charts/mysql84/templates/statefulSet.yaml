@@ -1,18 +1,18 @@
 kind: StatefulSet
 apiVersion: apps/v1
 metadata:
-  name: {{ .Chart.Name }}
+  name: mysql
 spec:
-  serviceName: {{ .Chart.Name }}
+  serviceName: mysql
   replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: mysql
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}
+        app: mysql
         release: {{ .Release.Name }}
     spec:
       dnsPolicy: ClusterFirst
@@ -31,7 +31,7 @@ spec:
       tolerations:
 {{ toYaml .Values.deployment.tolerations | indent 8 }}
       containers:
-      - name: {{ .Chart.Name }}
+      - name: mysql
         image: {{ .Values.deployment.dockerRegistry }}/percona/percona-server:{{ .Values.deployment.containerVersion }}
         imagePullPolicy: IfNotPresent
         env:
