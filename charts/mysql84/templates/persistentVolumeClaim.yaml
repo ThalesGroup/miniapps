@@ -2,7 +2,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ .Chart.Name }}-data
+  name: mysql-data
 spec:
 {{- if .Values.pvc.storageClassName }}
   storageClassName: {{ .Values.pvc.storageClassName }}
